@@ -3,17 +3,21 @@
 Home: PS2, NES
 Handheld: Game Boy, PSP
 Details
++Jüri
 
 
 VR: Oculus, VALVe index 
 Cloud: Stadia, Steam
 Cate view
+Icon creation
++Daniel
 
 
 Arcade: CPS1Board, DDR
 landing page
 Credits and sources
 See all cat
++Kristina
 
 
 ////

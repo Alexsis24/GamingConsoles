@@ -4,6 +4,39 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <!--font-based style bases-->
     
+    <Style TargetType="Label" x:Key="BaseTitleFontStyle">
+        <Setter Property="LineBreakMode" Value="TailTruncation"/>
+        <Setter Property="FontAutoScalingEnabled" Value="False" />
+        <Setter Property="FontFamily" Value="TitleFont" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="BaseSubTitleFontStyle">
+        <Setter Property="LineBreakMode" Value="TailTruncation"/>
+        <Setter Property="FontAutoScalingEnabled" Value="False" />
+        <Setter Property="FontFamily" Value="SubTitleFont" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="BaseNormalTextFont">
+        <Setter Property="LineBreakMode" Value="TailTruncation"/>
+        <Setter Property="FontAutoScalingEnabled" Value="False" />
+        <Setter Property="FontFamily" Value="TextFont" />
+    </Style>
+    
+    <Style TargetType="Label" x:Key="BaseRetroTextFont">
+        <Setter Property="LineBreakMode" Value="TailTruncation"/>
+        <Setter Property="FontAutoScalingEnabled" Value="False" />
+        <Setter Property="FontFamily" Value="RetroFont" />
+    </Style>
+    
+    
+    
+    <Style TargetType="Label" 
+           x:Key="ConsoleNameTextStyle"
+           BasedOn="{StaticResource BaseTitleFontStyle}">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+    </Style>
 
 </ResourceDictionary>

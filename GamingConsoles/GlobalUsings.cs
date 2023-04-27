@@ -1,1 +1,1 @@
-﻿
+﻿using GamingConsoles.Views;

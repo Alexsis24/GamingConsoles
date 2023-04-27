@@ -1,10 +1,10 @@
-﻿namespace GamingConsoles;
+namespace GamingConsoles.Views;
 
-public partial class MainPage : ContentPage
+public partial class LaunchPage : ContentPage
 {
 	int count = 0;
 
-	public MainPage()
+	public LaunchPage()
 	{
 		InitializeComponent();
 	}
@@ -21,4 +21,3 @@ public partial class MainPage : ContentPage
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
 }
-

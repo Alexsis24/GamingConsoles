@@ -1,10 +1,12 @@
 ﻿#if WINDOWS
 
+using GamingConsoles.Views;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Windows.Graphics;
 
 #endif
+
 
 namespace GamingConsoles;
 
@@ -32,6 +34,6 @@ public partial class App : Application
 
 #endif
 
-		MainPage = new AppShell();
+		MainPage = new NavigationPage(new GamingConsoles.Views.LaunchPage());
 	}
 }

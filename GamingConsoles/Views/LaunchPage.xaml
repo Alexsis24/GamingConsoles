@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GamingConsoles.Views.LaunchPage"
-             Title="LaunchPage">
+             >
 
 
     <ContentPage.Background>
@@ -22,12 +22,31 @@
         </LinearGradientBrush>
     </ContentPage.Background>
     <Grid>
+        <Image x:Name="snesimage"
+               Source="snesimagetp.png"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               TranslationY="-72"
+               WidthRequest="400"
+               HeightRequest="400"
+               Rotation="-15"/>
         <VerticalStackLayout>
             <Label
-            HorizontalOptions="Center"
+            HorizontalOptions="Fill"
             HorizontalTextAlignment="Center"
             Style="{StaticResource ConsoleNameTextStyle}"
-            Text="Hello! Welcome!" />
+            Text="Gaming Consoles"
+            TranslationY="470" 
+            BackgroundColor="{StaticResource LBlue}"
+            />
+            
+            <Button
+            Style="{StaticResource ButtonStyle}"
+            Text="See Consoles"
+            HorizontalOptions="Center"
+            TranslationY="500"
+            Margin="0,0,0,0"
+            Clicked="SeeConsoles_Clicked" />
         </VerticalStackLayout>
     </Grid>
 

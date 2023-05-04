@@ -55,7 +55,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Services\" />
-	  <Folder Include="Resources\Images\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -66,6 +65,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\CategoryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ConsolePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ConsoleSelection.xaml">

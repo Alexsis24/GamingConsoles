@@ -8,5 +8,5 @@ public partial class LaunchPage : ContentPage
 		InitializeComponent();
 	}
     async void SeeConsoles_Clicked(System.Object sender, System.EventArgs e)
-        => Application.Current.MainPage = new NavigationPage(new CategoryPage());
+        => Application.Current.MainPage = new NavigationPage(new ConsolePage());
 }

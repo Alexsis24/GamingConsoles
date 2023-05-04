@@ -4,7 +4,7 @@
              x:Class="GamingConsoles.Views.CategoryPage"
              >
 
-    <ContentPage.Background>
+    <!--<ContentPage.Background>
         <LinearGradientBrush
             StartPoint="0,0"
             EndPoint="1,1"
@@ -19,9 +19,262 @@
                 />
 
         </LinearGradientBrush>
-    </ContentPage.Background>
+    </ContentPage.Background>-->
+
+    <Grid
+        Background="{StaticResource BGColor}">
+        
+        
+        <Grid
+            RowDefinitions="64"
+            ColumnDefinitions="*">
+
+            <Label
+                Style="{StaticResource ConsoleTextStyle}"
+                Margin="0,12,0,0"
+                HorizontalTextAlignment="Center"
+                Background="{StaticResource LGreen}"
+                Text="Consoles Category">
+            </Label>
+        </Grid>
+
+        
+
+        <Grid>
+
+
+            <ScrollView
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalScrollBarVisibility="Never"
+                VerticalScrollBarVisibility="Never"
+                Margin="0,32,-24,0">
+
+                <VerticalStackLayout
+                    Spacing="12">
+
+
+
+                    <Grid
+                    RowDefinitions="*, 64, *, 64, *"
+                    ColumnDefinitions="*, 64, *"
+                    Padding="64, 16, 64, 16"
+                    >
+
+
+                        <!--GRID: 0, 0-->
+                        <Grid
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        RowDefinitions="32, 64"
+                        ColumnDefinitions="*"
+                        Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                        Background="{StaticResource LBlue}"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="Home Console"/>
+
+                            <!--description-->
+                            <Label 
+                        Background="{StaticResource DBlue}"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="asdf adf asdf asf"/>
+
+                        </Grid>
+
+
+
+
+                        <!--GRID: 0, 2-->
+                        <Grid
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        RowDefinitions="32, 64"
+                        ColumnDefinitions="*"
+                        Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                        Background="{StaticResource LBlue}"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="Home Console"/>
+
+                            <!--description-->
+                            <Label 
+                        Background="{StaticResource DBlue}"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="asdf adf asdf asf"/>
+
+                        </Grid>
+
+
+                        <!--GRID: 2, 0-->
+                        <Grid
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        RowDefinitions="32, 64"
+                        ColumnDefinitions="*"
+                        Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                        Background="{StaticResource LBlue}"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="Home Console"/>
+
+                            <!--description-->
+                            <Label 
+                        Background="{StaticResource DBlue}"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="asdf adf asdf asf"/>
+
+                        </Grid>
+
+
+                        <!--GRID: 2, 2-->
+                        <Grid
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        RowDefinitions="32, 64"
+                        ColumnDefinitions="*"
+                        Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                        Background="{StaticResource LBlue}"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="Home Console"/>
+
+                            <!--description-->
+                            <Label 
+                        Background="{StaticResource DBlue}"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="asdf adf asdf asf"/>
+
+                        </Grid>
+
+
+                        <!--GRID: 4, 0-->
+                        <Grid
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        RowDefinitions="32, 64"
+                        ColumnDefinitions="*"
+                        Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                        Background="{StaticResource LBlue}"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="Home Console"/>
+
+                            <!--description-->
+                            <Label 
+                        Background="{StaticResource DBlue}"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="asdf adf asdf asf"/>
+
+                        </Grid>
+
+
+                        <!--GRID: 4, 2-->
+                        <Grid
+                        Grid.Row="4"
+                        Grid.Column="2"
+                        RowDefinitions="32, 64"
+                        ColumnDefinitions="*"
+                        Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                        Background="{StaticResource LBlue}"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="Home Console"/>
+
+                            <!--description-->
+                            <Label 
+                        Background="{StaticResource DBlue}"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Padding="0, 0, 0, 0"
+                        Text="asdf adf asdf asf"/>
+
+                        </Grid>
+
+
+
+
+                    </Grid>
+
+
+
+
+
+                </VerticalStackLayout>
+
+
+            </ScrollView>
+
+
+        </Grid>
+        
+        
+        
+
+
+    </Grid>
     
-    <Grid>
+
+            <!--<Grid>
         <ScrollView
             Grid.Row="1"
             Grid.Column="0"
@@ -55,6 +308,8 @@
             </Grid>
 
         </VerticalStackLayout>
-    </Grid>
-    
+    </Grid>-->
+
+   
+
 </ContentPage>

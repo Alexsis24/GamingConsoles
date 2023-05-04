@@ -1,6 +1,6 @@
 namespace GamingConsoles.Views;
 
-public partial class CategoryPage : ContentView
+public partial class CategoryPage : ContentPage
 {
 	public CategoryPage()
 	{

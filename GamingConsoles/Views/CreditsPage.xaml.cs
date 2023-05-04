@@ -1,8 +1,8 @@
 namespace GamingConsoles.Views;
 
-public partial class Credits : ContentView
+public partial class CreditsPage : ContentPage
 {
-	public Credits()
+	public CreditsPage()
 	{
 		InitializeComponent();
 	}

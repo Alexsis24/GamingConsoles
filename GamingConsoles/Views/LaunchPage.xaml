@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GamingConsoles.Views.LaunchPage"
+             >
+
+
+    <ContentPage.Background>
+        <LinearGradientBrush
+            StartPoint="0,0"
+            EndPoint="1,1"
+            >
+            <GradientStop
+                Color="{StaticResource BGColor}"
+                Offset="0.0"
+                />
+            <GradientStop
+                Color="{StaticResource BGColor}"                
+                Offset="1.0"
+                />
+
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <Grid>
+        <Image x:Name="snesimage"
+               Source="snesimagetp.png"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               TranslationY="-72"
+               WidthRequest="400"
+               HeightRequest="400"
+               Rotation="-15"/>
+        <VerticalStackLayout>
+            <Label
+            HorizontalOptions="Fill"
+            HorizontalTextAlignment="Center"
+            Style="{StaticResource ConsoleNameTextStyle}"
+            Text="Gaming Consoles"
+            TranslationY="470" 
+            BackgroundColor="{StaticResource LBlue}"
+            />
+            
+            <Button
+            Style="{StaticResource ButtonStyle}"
+            Text="See Consoles"
+            HorizontalOptions="Center"
+            TranslationY="500"
+            Margin="0,0,0,0"
+            Clicked="SeeConsoles_Clicked" />
+        </VerticalStackLayout>
+    </Grid>
+
+
+</ContentPage>

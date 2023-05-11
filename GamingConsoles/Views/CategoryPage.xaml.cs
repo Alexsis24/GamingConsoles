@@ -5,6 +5,7 @@ public partial class CategoryPage : ContentPage
 	public CategoryPage()
 	{
 		InitializeComponent();
+
 	}
 
 	protected override void OnAppearing()
@@ -17,4 +18,12 @@ public partial class CategoryPage : ContentPage
 	{
 		await Navigation.PushAsync(new TestPage());
 	}
+
+	private void Button_Clicked(object sender, EventArgs e)
+	{
+
+    }
+
+	public async void SeeTestPage(System.Object sender, System.EventArgs e)
+		=> Application.Current.MainPage = new NavigationPage(new TestPage());
 }

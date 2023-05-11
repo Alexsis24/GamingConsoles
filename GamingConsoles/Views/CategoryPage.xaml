@@ -4,43 +4,48 @@
              x:Class="GamingConsoles.Views.CategoryPage"
              >
 
-    <!--<ContentPage.Background>
+    <ContentPage.Background>
         <LinearGradientBrush
             StartPoint="0,0"
             EndPoint="1,1"
             >
             <GradientStop
-                Color="{StaticResource BGColor}"
+                Color="{StaticResource DGreen}"
                 Offset="0.0"
                 />
             <GradientStop
-                Color="{StaticResource BGColor}"                
+                Color="{StaticResource DGreen}"                
                 Offset="1.0"
                 />
 
         </LinearGradientBrush>
-    </ContentPage.Background>-->
+    </ContentPage.Background>
 
     <Grid
+        RowDefinitions="64,*"
         Background="{StaticResource BGColor}">
-        
-        
+
+
         <Grid
-            RowDefinitions="64"
-            ColumnDefinitions="*">
+            Grid.Row="0"
+            ColumnDefinitions="*"
+            Background="{StaticResource DGreen}">
 
             <Label
                 Style="{StaticResource ConsoleTextStyle}"
                 Margin="0,12,0,0"
                 HorizontalTextAlignment="Center"
-                Background="{StaticResource LGreen}"
+                
                 Text="Consoles Category">
             </Label>
         </Grid>
 
-        
 
-        <Grid>
+
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="*"
+            Margin="0,32,0,0">
 
 
             <ScrollView
@@ -48,8 +53,8 @@
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 HorizontalScrollBarVisibility="Never"
-                VerticalScrollBarVisibility="Never"
-                Margin="0,32,-24,0">
+                VerticalScrollBarVisibility="Never">
+
 
                 <VerticalStackLayout
                     Spacing="12">
@@ -57,259 +62,208 @@
 
 
                     <Grid
-                    RowDefinitions="*, 64, *, 64, *"
-                    ColumnDefinitions="*, 64, *"
-                    Padding="64, 16, 64, 16"
-                    >
+                        RowDefinitions="*, 64, *, 64, *"
+                        ColumnDefinitions="*, 64, *"
+                        Margin="40, 0, 40, 0"
+                        >
 
 
                         <!--GRID: 0, 0-->
                         <Grid
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        RowDefinitions="32, 64"
-                        ColumnDefinitions="*"
-                        Background="{StaticResource DBlue}">
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
 
                             <!--title-->
                             <Label  
-                        Background="{StaticResource LBlue}"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="Home Console"/>
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="Home Consoles"/>
 
-                            <!--description-->
-                            <Label 
-                        Background="{StaticResource DBlue}"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="asdf adf asdf asf"/>
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
 
                         </Grid>
-
-
 
 
                         <!--GRID: 0, 2-->
                         <Grid
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        RowDefinitions="32, 64"
-                        ColumnDefinitions="*"
-                        Background="{StaticResource DBlue}">
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
 
                             <!--title-->
                             <Label  
-                        Background="{StaticResource LBlue}"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="Home Console"/>
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="Handheld consoles"/>
 
-                            <!--description-->
-                            <Label 
-                        Background="{StaticResource DBlue}"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="asdf adf asdf asf"/>
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
 
                         </Grid>
 
 
+
                         <!--GRID: 2, 0-->
                         <Grid
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        RowDefinitions="32, 64"
-                        ColumnDefinitions="*"
-                        Background="{StaticResource DBlue}">
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
 
                             <!--title-->
                             <Label  
-                        Background="{StaticResource LBlue}"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="Home Console"/>
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="VR"/>
 
-                            <!--description-->
-                            <Label 
-                        Background="{StaticResource DBlue}"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="asdf adf asdf asf"/>
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
 
                         </Grid>
 
 
                         <!--GRID: 2, 2-->
                         <Grid
-                        Grid.Row="2"
-                        Grid.Column="2"
-                        RowDefinitions="32, 64"
-                        ColumnDefinitions="*"
-                        Background="{StaticResource DBlue}">
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
 
                             <!--title-->
                             <Label  
-                        Background="{StaticResource LBlue}"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="Home Console"/>
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="Cloud"/>
 
-                            <!--description-->
-                            <Label 
-                        Background="{StaticResource DBlue}"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="asdf adf asdf asf"/>
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
 
                         </Grid>
 
 
                         <!--GRID: 4, 0-->
                         <Grid
-                        Grid.Row="4"
-                        Grid.Column="0"
-                        RowDefinitions="32, 64"
-                        ColumnDefinitions="*"
-                        Background="{StaticResource DBlue}">
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
 
                             <!--title-->
                             <Label  
-                        Background="{StaticResource LBlue}"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="Home Console"/>
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="Arcade"/>
 
-                            <!--description-->
-                            <Label 
-                        Background="{StaticResource DBlue}"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="asdf adf asdf asf"/>
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
 
                         </Grid>
 
 
                         <!--GRID: 4, 2-->
                         <Grid
-                        Grid.Row="4"
-                        Grid.Column="2"
-                        RowDefinitions="32, 64"
-                        ColumnDefinitions="*"
-                        Background="{StaticResource DBlue}">
+                            Grid.Row="4"
+                            Grid.Column="2"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
 
                             <!--title-->
                             <Label  
-                        Background="{StaticResource LBlue}"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="Home Console"/>
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="???"/>
 
-                            <!--description-->
-                            <Label 
-                        Background="{StaticResource DBlue}"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center"
-                        HorizontalTextAlignment="Center"
-                        Padding="0, 0, 0, 0"
-                        Text="asdf adf asdf asf"/>
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
 
                         </Grid>
 
-
-
-
                     </Grid>
 
-
-
-
-
                 </VerticalStackLayout>
-
-
             </ScrollView>
-
-
         </Grid>
-        
-        
-        
-
-
     </Grid>
-    
-
-            <!--<Grid>
-        <ScrollView
-            Grid.Row="1"
-            Grid.Column="0"
-            Grid.ColumnSpan="2"
-            HorizontalScrollBarVisibility="Never"
-            VerticalScrollBarVisibility="Never"
-            Margin="0,32,-24,0"
-            />
-        <VerticalStackLayout>
-            <Grid
-                HorizontalOptions="Fill"
-                HeightRequest="500"
-                Background="{StaticResource DBlue}"
-                Margin="50,50,50,0">
-                <Image x:Name="snesimage"
-                Grid.Row="1"
-                Margin="0, -200, 0, 0"
-                Source="snesimagetp.png"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                WidthRequest="250"
-                HeightRequest="250"
-                Rotation="-30"
-                />
-                <Label 
-                Grid.Row="2"
-                Background="{StaticResource LBlue}"
-                Text="ABC DEfg hij KLMN Opq rst"
-                Margin="0,300,0,0"
-                />
-            </Grid>
-
-        </VerticalStackLayout>
-    </Grid>-->
-
-   
-
 </ContentPage>

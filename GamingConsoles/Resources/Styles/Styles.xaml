@@ -42,7 +42,7 @@
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="BorderColor" Value="{StaticResource RedAccent}" />
     </Style>
-    
+
     <!--Launch page specific styles-->
 
     <Style TargetType="Label" 

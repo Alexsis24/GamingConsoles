@@ -25,5 +25,5 @@ public partial class CategoryPage : ContentPage
     }
 
 	public async void SeeTestPage(System.Object sender, System.EventArgs e)
-		=> Application.Current.MainPage = new NavigationPage(new TestPage());
+		=> Application.Current.MainPage = new NavigationPage(new GameConsolePage());
 }

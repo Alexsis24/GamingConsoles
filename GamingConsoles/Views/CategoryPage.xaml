@@ -1,7 +1,271 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GamingConsoles.Views.CategoryPage"
+             x:Class="GamingConsoles.Views.CategoryPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush
+            StartPoint="0,0"
+            EndPoint="1,1"
+            >
+            <GradientStop
+                Color="{StaticResource DGreen}"
+                Offset="0.0"
+                />
+            <GradientStop
+                Color="{StaticResource DGreen}"                
+                Offset="1.0"
+                />
+
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid
+        RowDefinitions="64,*"
+        Background="{StaticResource BGColor}">
+
+
+        <Grid
+            Grid.Row="0"
+            ColumnDefinitions="*"
+            Background="{StaticResource DGreen}">
+
+            <Label
+                Style="{StaticResource ConsoleTextStyle}"
+                Margin="0,12,0,0"
+                HorizontalTextAlignment="Center"
+                
+                Text="Consoles Category">
+            </Label>
+        </Grid>
+
+
+
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="*"
+            Margin="0,32,0,0">
+
+
+            <ScrollView
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalScrollBarVisibility="Never"
+                VerticalScrollBarVisibility="Never">
+
+
+                <VerticalStackLayout
+                    Spacing="12">
+
+
+
+                    <Grid
+                        RowDefinitions="*, 64, *, 64, *"
+                        ColumnDefinitions="*, 64, *"
+                        Margin="40, 0, 40, 0"
+                        >
+
+
+                        <!--GRID: 0, 0-->
+                        <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="Home Consoles"/>
+
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
+
+                        </Grid>
+
+
+                        <!--GRID: 0, 2-->
+                        <Grid
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="Handheld consoles"/>
+
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
+
+                        </Grid>
+
+
+
+                        <!--GRID: 2, 0-->
+                        <Grid
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="VR"/>
+
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
+
+                        </Grid>
+
+
+                        <!--GRID: 2, 2-->
+                        <Grid
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="Cloud"/>
+
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
+
+                        </Grid>
+
+
+                        <!--GRID: 4, 0-->
+                        <Grid
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="Arcade"/>
+
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
+
+                        </Grid>
+
+
+                        <!--GRID: 4, 2-->
+                        <Grid
+                            Grid.Row="4"
+                            Grid.Column="2"
+                            RowDefinitions="32, 128"
+                            ColumnDefinitions="*"
+                            Background="{StaticResource DBlue}">
+
+                            <!--title-->
+                            <Label  
+                                Background="{StaticResource LBlue}"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Padding="0, 0, 0, 0"
+                                Text="???"/>
+
+                            <!--button image-->
+                            <ImageButton 
+                                Grid.Row="1"
+                                Source="snesimagetp.png"
+                                Clicked="SeeTestPage"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                BorderColor="Transparent"
+                                Background="Transparent" 
+                                BackgroundColor="Transparent" />
+
+                        </Grid>
+
+                    </Grid>
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+    </Grid>
+=======
              Title="CategoryPage">
     <VerticalStackLayout>
         <Label 

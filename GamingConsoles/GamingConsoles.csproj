@@ -51,10 +51,7 @@
 	  <None Remove="Resources\Fonts\Niagaraphobia-Bro3.ttf" />
 	  <None Remove="Resources\Fonts\super-mario-bros-nes.otf" />
 	  <None Remove="Resources\Fonts\TrulyMadlyDpad-a72o.ttf" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Resources\Images\" />
+	  <None Remove="Resources\Images\imgback.png" />
 	</ItemGroup>
 
 	<ItemGroup>

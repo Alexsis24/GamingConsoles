@@ -9,4 +9,6 @@ namespace GamingConsoles.Services
     public class ConsolesServices
     {
     }
+
+
 }

@@ -6,24 +6,24 @@
 
     <!--font-based style bases-->
 
-    <Style TargetType="Label" x:Key="BaseTitleFontStyle">
+    <Style TargetType="Label" x:Key="TitleFontStyle">
         <Setter Property="FontAutoScalingEnabled" Value="False" />
         <Setter Property="FontFamily" Value="TitleFont" />
     </Style>
 
-    <Style TargetType="Label" x:Key="BaseSubTitleFontStyle">
+    <Style TargetType="Label" x:Key="SubTitleFontStyle">
         <Setter Property="LineBreakMode" Value="TailTruncation"/>
         <Setter Property="FontAutoScalingEnabled" Value="False" />
         <Setter Property="FontFamily" Value="SubTitleFont" />
     </Style>
 
-    <Style TargetType="Label" x:Key="BaseNormalTextFont">
+    <Style TargetType="Label" x:Key="NormalTextFont">
         <Setter Property="LineBreakMode" Value="TailTruncation"/>
         <Setter Property="FontAutoScalingEnabled" Value="False" />
         <Setter Property="FontFamily" Value="TextFont" />
     </Style>
     
-    <Style TargetType="Label" x:Key="BaseRetroTextFont">
+    <Style TargetType="Label" x:Key="RetroTextFont">
         <Setter Property="LineBreakMode" Value="TailTruncation"/>
         <Setter Property="FontAutoScalingEnabled" Value="False" />
         <Setter Property="FontFamily" Value="RetroFont" />
@@ -46,19 +46,45 @@
     <!--Launch page specific styles-->
 
     <Style TargetType="Label" 
-           x:Key="ConsoleNameTextStyle"
-           BasedOn="{StaticResource BaseTitleFontStyle}">
+           x:Key="IntroPageTextStyle"
+           BasedOn="{StaticResource TitleFontStyle}">
         <Setter Property="FontSize" Value="60"/>
         <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+    </Style>
+    
+    <!--Selection styles-->
+
+    <Style TargetType="Label"
+           x:Key="SelectionTitleStyle"
+           BasedOn="{StaticResource SubTitleFontStyle}">
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}"/>
     </Style>
 
     <!--Console specific styles-->
 
     <Style TargetType="Label" 
            x:Key="ConsoleTextStyle"
-           BasedOn="{StaticResource BaseNormalTextFont}">
-        <Setter Property="FontSize" Value="20"/>
+           BasedOn="{StaticResource NormalTextFont}">
+        <Setter Property="FontSize" Value="16"/>
         <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
     </Style>
+
+    <Style TargetType="Label"
+           x:Key="TitleStyle"
+           BasedOn="{StaticResource RetroTextFont}">
+        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="TextColor" Value="{StaticResource LightTextColor}"/>
+    </Style>
+
+    <!--Retro conosles title-->
+    <Style TargetType="Label"
+           x:Key="RetroTitleStyle"
+           BasedOn="{StaticResource RetroTextFont}">
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="TextColor" Value="{StaticResource LightTextColor}"/>
+    </Style>
+    
+    
 
 </ResourceDictionary>

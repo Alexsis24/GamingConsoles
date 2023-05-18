@@ -34,7 +34,7 @@
             <Label
             HorizontalOptions="Fill"
             HorizontalTextAlignment="Center"
-            Style="{StaticResource ConsoleNameTextStyle}"
+            Style="{StaticResource IntroPageTextStyle}"
             Text="Gaming Consoles"
             TranslationY="470" 
             BackgroundColor="{StaticResource LBlue}"

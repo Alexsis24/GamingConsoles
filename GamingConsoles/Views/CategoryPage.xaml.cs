@@ -6,4 +6,9 @@ public partial class CategoryPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
+    {
+        await Navigation.PushAsync(new PlanetDetailsPage(e.CurrentSelection.First() as Planet));
+    }
 }

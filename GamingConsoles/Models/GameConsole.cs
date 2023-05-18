@@ -31,7 +31,7 @@ namespace GamingConsoles.Models
         public string? DevelopedBy { get; set; } //developer of console. may not differ, but can differ from releasing company
         public string[]? AlternativeNames { get; set; } //alternative popular names for the console
         public string SystemType { get; set; } //typ of system, example: home, handheld, VR, arcade, cloud etc
-        // use systemtype to sort the consoles into the proper categories
+        // use systemtype to sort the consoles into the proper categories "Home Console", "Handheld Console", "Virtual Reality System", "Arcade Platform", "Cloud Platform"
         public int UnitsSold { get; set; } //lifetime worldwide unit sales total
         public string MediaType { get; set; } //what was media of choice, cartridge, card, cd, dvd, digital distribution, streamed/cloud etc
         public string? Predecessor { get; set; } //previous console for the company

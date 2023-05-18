@@ -5,12 +5,13 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using GamingConsoles.Models;
+using GamingConsoles.Views;
 
 namespace GamingConsoles.Services
 {
     internal static class GameConsolesServices
     {
-        private static List<GameConsole> gameconsoles = new List<GameConsole>()
+        private static List<GameConsole> gameConsoles = new List<GameConsole>()
         {
             new()
             {
@@ -49,14 +50,16 @@ namespace GamingConsoles.Services
                 HeroImage = "nes.png"
             },
         };
-        public static List<GameConsole> GetFeaturePlanets()
-        {
-            var random = new Random();
-            var randomizedconsoles = gameconsoles.OrderBy(item => random.Next());
-            return randomizedconsoles.Take(2).ToList();
-        }
+        
+        //public static List<GameConsole> GetFeaturePlanets()
+        //{
+        //    var random = new Random();
+        //    var randomizedconsoles = gameconsoles.OrderBy(item => random.Next());
+        //    return randomizedconsoles.Take(2).ToList();
+        //}
 
-        public static List<GameConsole> GetAllPlanets()
-            => gameconsoles;
+        //public static List<GameConsole> GetAllPlanets()
+        //    => gameconsoles;
+        public static List<GameConsole> GetAllConsoles() => gameConsoles;
     }
 }

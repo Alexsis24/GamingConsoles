@@ -89,7 +89,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="SeeConsolePage"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"

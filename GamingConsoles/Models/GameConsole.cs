@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Globalization;
 
 namespace GamingConsoles.Models
 {
@@ -59,10 +58,10 @@ namespace GamingConsoles.Models
         public string? CoreCount { get; set; } //amount of cpu cores
         public string? CpuBitBandwitchSize { get; set; } //how many "bits" does the main data bus have.
         public bool DoesHaveRom { get; set; } //if true, console has internal storage the user can read and write to for storage. most retro consoles dont have this
-        public int ROMSize { get; set; } //for modern consoles, consider this to be HDD/SSD
-        public int ROMType { get; set; } //here you say if it is eeprom, hdd or hdd or other.
+        public int? ROMSize { get; set; } //for modern consoles, consider this to be HDD/SSD
+        public int? ROMType { get; set; } //here you say if it is eeprom, hdd or hdd or other.
         public bool DoesHaveRemovableStorage { get; set; } //if console has removable storage, that is not main mediatype, but no expansion port
-        public string RemovableStorageType { get; set; } //type of removable storage (usb stick, memory card)
+        public string? RemovableStorageType { get; set; } //type of removable storage (usb stick, memory card)
         public string? RemovableStorageSize { get; set; } //max size of removable storage
         public string[] VideoOutputResolutions { get; set; } //resolutions the console is capable of outputting, standard ones only, no random ones pls. just follow wikipedia
         public string[] VideoOutputTypes { get; set; } //output types (hdmi, composite, component, s-video, displayport, vga, dvi etc)

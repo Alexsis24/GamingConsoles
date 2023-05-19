@@ -87,5 +87,6 @@ namespace GamingConsoles.Models
         public string[]? BackwardCompatibleWith { get; set; } //list of consoles its backward compatible with
         public List<string> Images { get; set; }
         public string HeroImage { get; set; }
+        public Color Background { get; set; }
     }
 }

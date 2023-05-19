@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GamingConsoles.Services
 {
-    public class ConsolesServices
+    public interface INavigationServices
     {
-
+        Task NavigateToAsync(string route, IDictionary<string, object> parameters);
     }
 }

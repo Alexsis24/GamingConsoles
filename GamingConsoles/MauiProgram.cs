@@ -1,4 +1,6 @@
-﻿namespace GamingConsoles;
+﻿using GamingConsoles.Services;
+
+namespace GamingConsoles;
 
 public static class MauiProgram
 {
@@ -14,6 +16,8 @@ public static class MauiProgram
 				fonts.AddFont("TrulyMadlyDpad-a72o.ttf", "TextFont");
 				fonts.AddFont("super-mario-bros-nes.ttf", "RetroFont");
 			});
+
+		builder.Services.AddSingleton<INavigationServices, NavigationServices>();
 
 		return builder.Build();
 	}

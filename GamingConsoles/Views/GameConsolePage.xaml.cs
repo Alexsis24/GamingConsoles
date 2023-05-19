@@ -1,11 +1,11 @@
-using GamingConsoles.Models;
 namespace GamingConsoles.Views;
 
 public partial class GameConsolePage : ContentPage
 {
-    public GameConsolePage()
+    public GameConsolePage(GameConsole gameConsole)
     {
         InitializeComponent();
+        this.BindingContext = gameConsole;
 
     }
 

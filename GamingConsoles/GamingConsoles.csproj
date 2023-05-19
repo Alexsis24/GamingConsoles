@@ -54,10 +54,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\ArcadeSelectionPage.xaml.cs">
+	    <DependentUpon>ArcadeSelectionPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\HomeSelectionPage.xaml.cs">
+	    <DependentUpon>HomeSelectionPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\ArcadeSelectionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\CategoryPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ConsoleSelectionPage.xaml">
+	  <MauiXaml Update="Views\CloudSelectionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CreditsPage.xaml">
@@ -66,7 +78,16 @@
 	  <MauiXaml Update="Views\GameConsolePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\HandheldSelectionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\HomeSelectionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TestPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\VRSelectionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

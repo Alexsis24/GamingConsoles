@@ -83,13 +83,14 @@
                                 VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"
                                 Padding="0, 0, 0, 0"
-                                Text="Home Consoles"/>
+                                Text="Home Consoles"
+                                />
 
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetHomeSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -121,7 +122,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetHandheldSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -154,7 +155,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetVRSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -186,7 +187,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetCloudSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -218,7 +219,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetArcadeSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -250,7 +251,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetArcadeSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"

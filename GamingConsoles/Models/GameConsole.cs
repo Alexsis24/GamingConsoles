@@ -41,7 +41,7 @@ namespace GamingConsoles.Models
         public string? ExtensionPortType { get; set; } //what type is the expansion port
         public string CPU { get; set; } //name of primary cpu
         public string CPUType { get; set; } //type of primary cpu, can be cpu, SOC or whatever else
-        public int CPUSpeed { get; set; } //clock speed of said cpu
+        public uint CPUSpeed { get; set; } //clock speed of said cpu
         public string? GPU { get; set; } //name of primary gpu, can be same as cpu
         public string? GPUType { get; set; } //type of primary cpu - standalone, integrated, none, etc.
         public int? GPUSpeed { get; set; } //speed of said gpu
@@ -58,8 +58,8 @@ namespace GamingConsoles.Models
         public string? CoreCount { get; set; } //amount of cpu cores
         public string? CpuBitBandwitchSize { get; set; } //how many "bits" does the main data bus have.
         public bool DoesHaveRom { get; set; } //if true, console has internal storage the user can read and write to for storage. most retro consoles dont have this
-        public int? ROMSize { get; set; } //for modern consoles, consider this to be HDD/SSD
-        public int? ROMType { get; set; } //here you say if it is eeprom, hdd or hdd or other.
+        public string? ROMSize { get; set; } //for modern consoles, consider this to be HDD/SSD
+        public string? ROMType { get; set; } //here you say if it is eeprom, hdd or hdd or other.
         public bool DoesHaveRemovableStorage { get; set; } //if console has removable storage, that is not main mediatype, but no expansion port
         public string? RemovableStorageType { get; set; } //type of removable storage (usb stick, memory card)
         public string? RemovableStorageSize { get; set; } //max size of removable storage
@@ -85,6 +85,9 @@ namespace GamingConsoles.Models
         public string[] Top10GamesSoldWorldWide { get; set; } //top 10 sold games in eu
         public bool? DoesHaveBackwardCompatibility { get; set; } //true if console has backward compatibility with an older console or consoles
         public string[]? BackwardCompatibleWith { get; set; } //list of consoles its backward compatible with
+        public bool? DoesHaveSystemLink { get; set; } //does the console have a console-to-console linking system other than wireless or lan? link cables
+        public string? SystemLinkType { get; set; } //system linking type
+        public int? HowManySystemsLinkable { get; set; } //how many systems can be linked up at one time through various official means.
         public List<string> Images { get; set; }
         public string HeroImage { get; set; }
     }

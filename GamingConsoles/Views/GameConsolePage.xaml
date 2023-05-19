@@ -66,7 +66,20 @@
                     Background="{StaticResource RedAccent}"
                     />
                 <!--Overview section-->
-
+                <Grid
+                    Margin="12,12,12,12"
+                    Grid.Row="2"
+                    ColumnDefinitions="*"
+                    RowDefinitions="12,*"
+                    HeightRequest="200"
+                    Background="{StaticResource LBlue}">
+                    <Label
+                    Style="{StaticResource ConsoleTextStyle}"
+                    Margin="12,12,0,0"
+                    HorizontalTextAlignment="Start"                
+                    Text="wikipedia blurb here"
+                    />
+                </Grid>
             </Grid>
         </ScrollView>
     </Grid>

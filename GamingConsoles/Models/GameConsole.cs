@@ -90,5 +90,6 @@ namespace GamingConsoles.Models
         public int? HowManySystemsLinkable { get; set; } //how many systems can be linked up at one time through various official means.
         public List<string> Images { get; set; }
         public string HeroImage { get; set; }
+        public Color Background { get; set; }
     }
 }

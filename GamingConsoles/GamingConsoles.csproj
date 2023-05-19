@@ -54,10 +54,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\CategoryPage.xaml">
+	  <MauiXaml Update="Views\ArcadeSelectionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ConsoleSelectionPage.xaml">
+	  <MauiXaml Update="Views\CategoryPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CreditsPage.xaml">

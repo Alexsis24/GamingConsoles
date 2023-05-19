@@ -218,7 +218,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetArcadeSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"

@@ -26,7 +26,7 @@ namespace GamingConsoles.Services
                 SystemGeneralDiscontinuedAt = new DateOnly(2003,1,1),
                 SystemGeneralReleasePrice = 14800,
                 ReleasedBy = "Nintendo",
-                SystemType = "Home Console",
+                SystemType = "Arcade Console",
                 UnitsSold = 61910000,
                 MediaType = "Cartridge",
                 ControllerPorts = "2 controller ports, but expandable to 4 with external addon.",
@@ -47,7 +47,8 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/0/06/Nintendo-Famicom-Console-Set-FL.jpg"
                 },
-                HeroImage = "nes.png"
+                HeroImage = "nes.png",
+                Background = Color.FromArgb("#2B6641")
             },
             new()
             {
@@ -62,7 +63,7 @@ namespace GamingConsoles.Services
                 SystemGeneralDiscontinuedAt = new DateOnly(2013,1,4),
                 SystemGeneralReleasePrice = 299,
                 ReleasedBy = "Sony",
-                SystemType = "Home Console",
+                SystemType = "Arcade Console",
                 UnitsSold = 158700000,
                 MediaType = "DVD, CD-ROM",
                 ControllerPorts = "2 controller ports, but expandable to 4 with external addon.",
@@ -98,7 +99,8 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Sony-PlayStation-2-70001-Console-BR.jpg/1024px-Sony-PlayStation-2-70001-Console-BR.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/DualShock_2.jpg/1024px-DualShock_2.jpg"
                 },
-                HeroImage = "ps2fat.png"
+                HeroImage = "ps2fat.png",
+                Background = Color.FromArgb("#429754")
             },
             new()
             {
@@ -144,7 +146,8 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Sega-Game-Gear-WB.png/1024px-Sega-Game-Gear-WB.png",
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Sega-Game-Gear-wTv-Tuner.jpg/800px-Sega-Game-Gear-wTv-Tuner.jpg"
                 },
-                HeroImage = "sgg.png"
+                HeroImage = "sgg.png",
+                Background = Color.FromArgb("#26537a")
             },
             new()
             {
@@ -181,7 +184,8 @@ namespace GamingConsoles.Services
                     "https://static.wikia.nocookie.net/retroconsoles/images/1/1e/Brick_game.jpg/revision/latest?cb=20130529142328",
                     "https://image.made-in-china.com/43f34j00waEQdHTRqtnb/Brick-Game-Player-CD-9999-.webp"
                 },
-                HeroImage = "brick.png"
+                HeroImage = "brick.png",
+                Background = Color.FromArgb("#345645")
             },
         };
         private static List<GameConsole> handheldConsoles = new List<GameConsole>()
@@ -230,7 +234,9 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Sega-Game-Gear-WB.png/1024px-Sega-Game-Gear-WB.png",
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Sega-Game-Gear-wTv-Tuner.jpg/800px-Sega-Game-Gear-wTv-Tuner.jpg"
                 },
-                HeroImage = "sgg.png"
+                HeroImage = "sgg.png",
+                Background = Color.FromArgb("#172739")
+
             },
             new()
             {
@@ -267,10 +273,11 @@ namespace GamingConsoles.Services
                     "https://static.wikia.nocookie.net/retroconsoles/images/1/1e/Brick_game.jpg/revision/latest?cb=20130529142328",
                     "https://image.made-in-china.com/43f34j00waEQdHTRqtnb/Brick-Game-Player-CD-9999-.webp"
                 },
-                HeroImage = "brick.png"
+                HeroImage = "brick.png",
+                Background = Color.FromArgb("#467893")
             },
         };
-        private static List<GameConsole> homeConsoles = new List<GameConsole>()
+        private static List<GameConsole> arcadeConsoles = new List<GameConsole>()
         {
             new()
             {
@@ -306,7 +313,8 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/0/06/Nintendo-Famicom-Console-Set-FL.jpg"
                 },
-                HeroImage = "nes.png"
+                HeroImage = "nes.png",
+                Background = Color.FromArgb("#265783")
             },
             new()
             {
@@ -357,7 +365,8 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Sony-PlayStation-2-70001-Console-BR.jpg/1024px-Sony-PlayStation-2-70001-Console-BR.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/DualShock_2.jpg/1024px-DualShock_2.jpg"
                 },
-                HeroImage = "ps2fat.png"
+                HeroImage = "ps2fat.png",
+                Background = Color.FromArgb("#253633")
             },
         };
         //public static List<GameConsole> GetFeaturePlanets()
@@ -370,9 +379,8 @@ namespace GamingConsoles.Services
             //public static List<GameConsole> GetAllPlanets()
             //    => gameconsoles;
         public static List<GameConsole> GetAllConsoles() => gameConsoles;
-        public static List<GameConsole> GetHomeConsoles() => homeConsoles;
+        public static List<GameConsole> GetArcadeConsoles() => arcadeConsoles;
         public static List<GameConsole> GetHandheldConsoles() => handheldConsoles;
-
         public static List<GameConsole> GetConsolesByCategory(string category)
         {
             //var random = new Random();

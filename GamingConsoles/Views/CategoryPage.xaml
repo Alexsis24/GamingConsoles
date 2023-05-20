@@ -89,7 +89,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeConsolePage"
+                                Clicked="GetHomeSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -121,7 +121,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetHandheldSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -154,7 +154,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetVRSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -186,7 +186,7 @@
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetCloudSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -228,7 +228,7 @@
                         </Grid>
 
 
-                        <!--GRID: 4, 2-->
+                        <!--GRID: 4, 2--><!--
                         <Grid
                             Grid.Row="4"
                             Grid.Column="2"
@@ -236,7 +236,7 @@
                             ColumnDefinitions="*"
                             Background="{StaticResource DBlue}">
 
-                            <!--title-->
+                            --><!--title--><!--
                             <Label  
                                 Background="{StaticResource LBlue}"
                                 Grid.Row="0"
@@ -246,7 +246,7 @@
                                 Padding="0, 0, 0, 0"
                                 Text="???"/>
 
-                            <!--button image-->
+                            --><!--button image--><!--
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
@@ -257,7 +257,7 @@
                                 Background="Transparent" 
                                 BackgroundColor="Transparent" />
 
-                        </Grid>
+                        </Grid>-->
 
                     </Grid>
 

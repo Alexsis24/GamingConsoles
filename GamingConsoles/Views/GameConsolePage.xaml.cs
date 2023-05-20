@@ -4,10 +4,9 @@ namespace GamingConsoles.Views;
 
 public partial class GameConsolePage : ContentPage
 {
-    public GameConsolePage(/*GameConsole console*/)
+    public GameConsolePage()
     {
         InitializeComponent();
-        //this.BindingContext = console;
     }
 
     async void BackButton_Clicked(System.Object sender, System.EventArgs e)

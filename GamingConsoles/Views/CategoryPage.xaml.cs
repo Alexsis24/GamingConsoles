@@ -9,7 +9,7 @@ public partial class CategoryPage : ContentPage
 
 	protected override void OnAppearing()
 	{
-		base.OnAppearing();
+		base.OnAppearing();	
 
 	}
 
@@ -18,15 +18,16 @@ public partial class CategoryPage : ContentPage
 		await Navigation.PushAsync(new TestPage());
 	}
 
-	private void Button_Clicked(object sender, EventArgs e)
-	{
 
-    }
-
-	public async void SeeConsolePage(System.Object sender, System.EventArgs e)
-		=> Application.Current.MainPage = new NavigationPage(new GameConsolePage());
-    public async void SeeTestPage(System.Object sender, System.EventArgs e)
-        => Application.Current.MainPage = new NavigationPage(new TestPage());
+	public async void GetHomeSelection(System.Object sender, System.EventArgs e)
+        => Application.Current.MainPage = new NavigationPage(new HomeSelectionPage());
+    public async void GetHandheldSelection(System.Object sender, System.EventArgs e)
+        => Application.Current.MainPage = new NavigationPage(new HandheldSelectionPage());
+    public async void GetVRSelection(System.Object sender, System.EventArgs e)
+        => Application.Current.MainPage = new NavigationPage(new VRSelectionPage());
     public async void GetArcadeSelection(System.Object sender, System.EventArgs e)
         => Application.Current.MainPage = new NavigationPage(new ArcadeSelectionPage());
+    public async void GetCloudSelection(System.Object sender, System.EventArgs e)
+        => Application.Current.MainPage = new NavigationPage(new CloudSelectionPage());
+
 }

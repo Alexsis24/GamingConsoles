@@ -369,6 +369,21 @@ namespace GamingConsoles.Services
                 Background = Color.FromArgb("#253633")
             },
         };
+
+        private static List<GameConsole> cloudConsoles = new List<GameConsole>()
+        {
+            new(){} 
+        };
+
+        private static List<GameConsole> homeConsoles = new List<GameConsole>()
+        {
+            new(){} 
+        };
+
+        private static List<GameConsole> vrConsoles = new List<GameConsole>()
+        {
+            new(){} 
+        };
         //public static List<GameConsole> GetFeaturePlanets()
         //{
         //    var random = new Random();
@@ -380,7 +395,10 @@ namespace GamingConsoles.Services
             //    => gameconsoles;
         public static List<GameConsole> GetAllConsoles() => gameConsoles;
         public static List<GameConsole> GetArcadeConsoles() => arcadeConsoles;
+        public static List<GameConsole> GetCloudConsoles() => cloudConsoles;
         public static List<GameConsole> GetHandheldConsoles() => handheldConsoles;
+        public static List<GameConsole> GetHomeConsoles() => homeConsoles;
+        public static List<GameConsole> GetVRConsoles() => vrConsoles;
         public static List<GameConsole> GetConsolesByCategory(string category)
         {
             //var random = new Random();

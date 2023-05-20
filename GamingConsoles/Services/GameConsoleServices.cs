@@ -6,12 +6,106 @@ using System.Text;
 using System.Threading.Tasks;
 using GamingConsoles.Models;
 using GamingConsoles.Views;
+using static System.Net.WebRequestMethods;
 
 namespace GamingConsoles.Services
 {
     internal static class GameConsolesServices
     {
-        
+        private static List<GameConsole> arcadeConsoles = new List<GameConsole>()
+        {
+            new()
+            {
+                SystemName = "  DanceDanceRevolution",
+                IsSystemReleased = true,
+                SystemReleaseState = "Released",
+                SystemReleaseYearEurope = new DateOnly(1999,3,9),
+                SystemReleaseYearAmerica = new DateOnly(1999,3,1),
+                SystemReleaseYearJapan = new DateOnly(1998,9,26),
+                SystemGeneralReleaseYear = new DateOnly(1998,9,26),
+                SystemGeneralLifespan = new DateOnly[] { new DateOnly(1998, 9, 26),new DateOnly (2003,1,1) },
+                SystemGeneralDiscontinuedAt = new DateOnly(00,0,0),
+                SystemGeneralReleasePrice = 00,
+                ReleasedBy = "Konami",
+                SystemType = "Arcade Console",
+                UnitsSold = 0,
+                MediaType = "",
+                ControllerPorts = "2 controller ports, but expandable to 4 with external addon.",
+                CPU = "R3000A 32 bit RISC processor",
+                CPUType = "",
+                CPUSpeed = 17900000,
+                RamSize = "2KB",
+                GPURamSize = "2KB",
+                DoesHaveRom = true,
+                DoesHaveRemovableStorage = false,
+                VideoOutputResolutions = new[]{"256x224", "740x480" },
+                VideoOutputTypes = new[]{"RF","Composite" },
+                VideoOutputFrameRates = new[]{"60", "50" },
+                TotalGamesReleasedWorldWide = 100,
+                Top10GamesSoldWorldWide = new[]{"Super Mario Bros.","Duck Hunt","Super Mario Bros. 3","Tetris","Super Mario Bros. 2 (International Version)","The Legend of Zelda","Dr.Mario","Zelda II: The Adventure of Link","Excitebike","Golf7" },
+                Images = new()
+                {
+                    "https://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/0/06/Nintendo-Famicom-Console-Set-FL.jpg"
+                },
+                HeroImage = "nes.png",
+                Background = Color.FromArgb("#265783"),
+                
+            },
+            //https://web.archive.org/web/20100206030743/http://system16.com/hardware.php?id=822
+            new()
+            {
+                SystemName = "PlayStation 2",
+                IsSystemReleased = true,
+                SystemReleaseState = "Released",
+                SystemReleaseYearEurope = new DateOnly(2000,11,24),
+                SystemReleaseYearAmerica = new DateOnly(2000,10,26),
+                SystemReleaseYearJapan = new DateOnly(2000,3,4),
+                SystemGeneralReleaseYear = new DateOnly(2004,1,1),
+                SystemGeneralLifespan = new DateOnly[] { new DateOnly(2000, 3, 4),new DateOnly (2013,1,4) },
+                SystemGeneralDiscontinuedAt = new DateOnly(2013,1,4),
+                SystemGeneralReleasePrice = 299,
+                ReleasedBy = "Sony",
+                SystemType = "Home Console",
+                UnitsSold = 158700000,
+                MediaType = "DVD, CD-ROM",
+                ControllerPorts = "2 controller ports, but expandable to 4 with external addon.",
+                CPU = "MIPS R5900 Emotion Engine",
+                CPUType = "Central Processing Unit",
+                CPUSpeed = 2990000000,
+                RamSize = "32MB",
+                GPURamSize = "4MB",
+                GPUSpeed = 1474560000,
+                DoesHaveRom = true,
+                ROMSize = "40GB",
+                ROMType = "Internal HDD for PS2 fat models only.",
+                DoesHaveRemovableStorage = true,
+                RemovableStorageType = "Memory Card",
+                RemovableStorageSize = "8MB",
+                VideoOutputResolutions = new[]{"512 x 224","512 x 448","640 x 448","640 x 480" },
+                VideoOutputTypes = new[]{"Composite","Scart","VGA","Component"},
+                VideoOutputFrameRates = new[]{"60", "50" },
+                TotalGamesReleasedWorldWide = 4218,
+                Top10GamesSoldWorldWide = new[]{"Grand Theft Auto: San Andreas",
+                    "Gran Turismo 3: A-Spec",
+                    "Gran Turismo 4",
+                    "Grand Theft Auto: Vice City",
+                    "Final Fantasy X",
+                    "Grand Theft Auto III",
+                    "Metal Gear Solid 2: Sons of Liberty",
+                    "Tekken 5",
+                    "Final Fantasy XII",
+                    "Kingdom Hearts" },
+                Images = new()
+                {
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/PS2-Versions.jpg/1024px-PS2-Versions.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Sony-PlayStation-2-70001-Console-BR.jpg/1024px-Sony-PlayStation-2-70001-Console-BR.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/DualShock_2.jpg/1024px-DualShock_2.jpg"
+                },
+                HeroImage = "ps2fat.png",
+                Background = Color.FromArgb("#253633")
+            },
+        };
         private static List<GameConsole> handheldConsoles = new List<GameConsole>()
         {
             new()
@@ -101,7 +195,14 @@ namespace GamingConsoles.Services
                 Background = Color.FromArgb("#467893")
             },
         };
-        private static List<GameConsole> arcadeConsoles = new List<GameConsole>()
+        
+
+        private static List<GameConsole> cloudConsoles = new List<GameConsole>()
+        {
+            new(){} 
+        };
+
+        private static List<GameConsole> homeConsoles = new List<GameConsole>()
         {
             new()
             {
@@ -191,17 +292,7 @@ namespace GamingConsoles.Services
                 },
                 HeroImage = "ps2fat.png",
                 Background = Color.FromArgb("#253633")
-            },
-        };
-
-        private static List<GameConsole> cloudConsoles = new List<GameConsole>()
-        {
-            new(){} 
-        };
-
-        private static List<GameConsole> homeConsoles = new List<GameConsole>()
-        {
-            new(){} 
+            } 
         };
 
         private static List<GameConsole> vrConsoles = new List<GameConsole>()

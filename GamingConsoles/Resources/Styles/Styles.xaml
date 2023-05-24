@@ -52,6 +52,12 @@
         <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
     </Style>
 
+    <Style TargetType="Label" x:Key="CategoryPageHeaderStyle"
+           BasedOn="{StaticResource BaseTitleFontStyle}">
+        <Setter Property="FontSize" Value="32" />
+        <Setter Property="TextColor" Value="{StaticResource LightTextColor}"/>
+    </Style>
+
     <!--Console specific styles-->
 
     <Style TargetType="Label" 

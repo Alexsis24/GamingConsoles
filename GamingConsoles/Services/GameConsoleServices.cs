@@ -24,7 +24,7 @@ namespace GamingConsoles.Services
                 SystemReleaseYearJapan = new DateOnly(1998,9,26),
                 SystemGeneralReleaseYear = new DateOnly(1998,9,26),
                 SystemGeneralLifespan = new DateOnly[] { new DateOnly(1998, 9, 26),new DateOnly (2003,1,1) },
-                SystemGeneralDiscontinuedAt = new DateOnly(00,0,0),
+                SystemGeneralDiscontinuedAt = new DateOnly(1999,1,1),
                 SystemGeneralReleasePrice = 00,
                 ReleasedBy = "Konami",
                 SystemType = "Arcade Console",
@@ -42,20 +42,20 @@ namespace GamingConsoles.Services
                 VideoOutputTypes = new[]{"RF","Composite" },
                 VideoOutputFrameRates = new[]{"60", "50" },
                 TotalGamesReleasedWorldWide = 100,
-                Top10GamesSoldWorldWide = new[]{"Super Mario Bros.","Duck Hunt","Super Mario Bros. 3","Tetris","Super Mario Bros. 2 (International Version)","The Legend of Zelda","Dr.Mario","Zelda II: The Adventure of Link","Excitebike","Golf7" },
+                Top10GamesSoldWorldWide = new[]{"" },
                 Images = new()
                 {
                     "https://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/0/06/Nintendo-Famicom-Console-Set-FL.jpg"
                 },
-                HeroImage = "nes.png",
-                Background = Color.FromArgb("#265783"),
+                HeroImage = "ddrlogo.png",
+                Background = Color.FromArgb("#385D8F"),
                 
             },
             //https://web.archive.org/web/20100206030743/http://system16.com/hardware.php?id=822
             new()
             {
-                SystemName = "PlayStation 2",
+                SystemName = "CP System",
                 IsSystemReleased = true,
                 SystemReleaseState = "Released",
                 SystemReleaseYearEurope = new DateOnly(2000,11,24),
@@ -64,15 +64,15 @@ namespace GamingConsoles.Services
                 SystemGeneralReleaseYear = new DateOnly(2004,1,1),
                 SystemGeneralLifespan = new DateOnly[] { new DateOnly(2000, 3, 4),new DateOnly (2013,1,4) },
                 SystemGeneralDiscontinuedAt = new DateOnly(2013,1,4),
-                SystemGeneralReleasePrice = 299,
-                ReleasedBy = "Sony",
-                SystemType = "Home Console",
+                SystemGeneralReleasePrice = 0,
+                ReleasedBy = "Capcom",
+                SystemType = "Arcade Console",
                 UnitsSold = 158700000,
                 MediaType = "DVD, CD-ROM",
                 ControllerPorts = "2 controller ports, but expandable to 4 with external addon.",
-                CPU = "MIPS R5900 Emotion Engine",
-                CPUType = "Central Processing Unit",
-                CPUSpeed = 2990000000,
+                CPU = "Motorola 68000",
+                CPUType = "",
+                CPUSpeed = 0,
                 RamSize = "32MB",
                 GPURamSize = "4MB",
                 GPUSpeed = 1474560000,
@@ -86,8 +86,9 @@ namespace GamingConsoles.Services
                 VideoOutputTypes = new[]{"Composite","Scart","VGA","Component"},
                 VideoOutputFrameRates = new[]{"60", "50" },
                 TotalGamesReleasedWorldWide = 4218,
-                Top10GamesSoldWorldWide = new[]{"Grand Theft Auto: San Andreas",
-                    "Gran Turismo 3: A-Spec",
+                Top10GamesSoldWorldWide = new[]{"Street Fighter",
+                    "1941 - Counter Attack",
+                    "Street Fighter II",
                     "Gran Turismo 4",
                     "Grand Theft Auto: Vice City",
                     "Final Fantasy X",
@@ -102,8 +103,8 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Sony-PlayStation-2-70001-Console-BR.jpg/1024px-Sony-PlayStation-2-70001-Console-BR.jpg",
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/DualShock_2.jpg/1024px-DualShock_2.jpg"
                 },
-                HeroImage = "ps2fat.png",
-                Background = Color.FromArgb("#253633")
+                HeroImage = "ddrlogo.png",
+                Background = Color.FromArgb("#2B6641")
             },
         };
         private static List<GameConsole> handheldConsoles = new List<GameConsole>()
@@ -153,7 +154,7 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Sega-Game-Gear-wTv-Tuner.jpg/800px-Sega-Game-Gear-wTv-Tuner.jpg"
                 },
                 HeroImage = "sgg.png",
-                Background = Color.FromArgb("#172739")
+                Background = Color.FromArgb("#385D8F")
 
             },
             new()
@@ -239,7 +240,7 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/0/06/Nintendo-Famicom-Console-Set-FL.jpg"
                 },
                 HeroImage = "nes.png",
-                Background = Color.FromArgb("#265783")
+                Background = Color.FromArgb("#385D8F")
             },
             new()
             {
@@ -306,30 +307,29 @@ namespace GamingConsoles.Services
         //    return randomizedconsoles.Take(2).ToList();
         //}
 
-            //public static List<GameConsole> GetAllPlanets()
-            //    => gameconsoles;
-        public static List<GameConsole> GetAllConsoles() => gameConsoles;
+
+        //public static List<GameConsole> GetAllConsoles() => gameConsoles;
         public static List<GameConsole> GetArcadeConsoles() => arcadeConsoles;
         public static List<GameConsole> GetCloudConsoles() => cloudConsoles;
         public static List<GameConsole> GetHandheldConsoles() => handheldConsoles;
         public static List<GameConsole> GetHomeConsoles() => homeConsoles;
         public static List<GameConsole> GetVRConsoles() => vrConsoles;
-        public static List<GameConsole> GetConsolesByCategory(string category)
-        {
-            //var random = new Random();
-            //var randomizedPlanets = planets.OrderBy(item => random.Next());
-            //return randomizedPlanets.Take(2).ToList();
+        //public static List<GameConsole> GetConsolesByCategory(string category)
+        //{
+        //    //var random = new Random();
+        //    //var randomizedPlanets = planets.OrderBy(item => random.Next());
+        //    //return randomizedPlanets.Take(2).ToList();
 
-            //var selectedConsoles = new List<GameConsole>();
-            var consolesFromCategory = new List<GameConsole>();
-            foreach (var console in gameConsoles)
-            {
-                if (console.SystemType == category)
-                {
-                    consolesFromCategory.Add(console);
-                }
-            }
-            return consolesFromCategory;
-        }
+        //    //var selectedConsoles = new List<GameConsole>();
+        //    var consolesFromCategory = new List<GameConsole>();
+        //    foreach (var console in gameConsoles)
+        //    {
+        //        if (console.SystemType == category)
+        //        {
+        //            consolesFromCategory.Add(console);
+        //        }
+        //    }
+        //    return consolesFromCategory;
+        //}
     }
 }

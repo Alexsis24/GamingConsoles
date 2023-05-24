@@ -25,7 +25,7 @@
             x:Name="Header">
 
             <Grid.Background>
-                <SolidColorBrush Color="{StaticResource DBlue}"/>
+                <SolidColorBrush Color="{StaticResource BGColor}"/>
             </Grid.Background>
 
 

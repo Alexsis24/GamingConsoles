@@ -120,7 +120,7 @@
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
-                                Source="snesimagetp.png"
+                                Source="cloudplatformicon.png"
                                 Clicked="GetCloudSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
@@ -185,7 +185,7 @@
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
-                                Source="snesimagetp.png"
+                                Source="homeconsoleicon.png"
                                 Clicked="GetHomeSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
@@ -217,7 +217,7 @@
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
-                                Source="snesimagetp.png"
+                                Source="vricon.png"
                                 Clicked="GetVRSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"

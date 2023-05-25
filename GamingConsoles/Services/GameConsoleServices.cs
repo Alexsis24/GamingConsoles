@@ -200,8 +200,98 @@ namespace GamingConsoles.Services
 
         private static List<GameConsole> cloudConsoles = new List<GameConsole>()
         {
-            new(){} 
-        };
+			new()
+			{
+				SystemName = "Stadia",
+				IsSystemReleased = true,
+				SystemReleaseState = "Closed",
+				SystemReleaseYearEurope = new DateOnly(2019,11,19),
+				SystemReleaseYearAmerica = new DateOnly(2019,11,19),
+				SystemReleaseYearJapan = new DateOnly(2019, 11, 19),
+				SystemGeneralReleaseYear = new DateOnly(2019,11,19),
+				SystemGeneralLifespan = new DateOnly[] { new DateOnly(2019, 11, 19),new DateOnly (2023, 01, 18) },
+				SystemGeneralDiscontinuedAt = new DateOnly(2023, 01, 18),
+				SystemGeneralReleasePrice = 10,
+				ReleasedBy = "Google",
+				SystemType = "Cloud gaming service",
+				UnitsSold = 750000,
+				MediaType = "Cloud",
+				CPU = "Intel x86",
+				CPUType = "Central Processing Unit",
+				CPUSpeed = 2700000000,
+				RamSize = "16GB",
+				GPURamSize = "8GB",
+				GPUSpeed = 1471000000,
+				DoesHaveRom = true,
+				ROMSize = "Unspecified",
+				ROMType = "SSD",
+				VideoOutputResolutions = new[]{"10 Mbit/s 720p","20 Mbit/s 1080p","35 Mbit/s 4k"},
+				VideoOutputTypes = new[]{"via streaming to user's device"},
+				VideoOutputFrameRates = new[]{"60"},
+				TotalGamesReleasedWorldWide = 278,
+				Top10GamesSoldWorldWide = new[]{"PUBG: Battlegrounds",
+					"Red Dead Redeption 2",
+					"Terraria",
+					"Human Fall Flat",
+					"FIFA 21",
+					"Far Cry 5",
+					"Ark: Survive Evolved",
+					"Elder Scrolls Online",
+					"Cyberpunk 2077",
+					"Assassin's Creed Valhalla" },
+				Images = new()
+				{
+					"https://en.wikipedia.org/wiki/Google_Stadia#/media/File:Google_Stadia_Cloud_gaming_(48605754611).jpg"
+				},
+				HeroImage = "stadia.png",
+				Background = Color.FromArgb("#f6431e")
+			},
+
+			new()
+			{
+				SystemName = "GeForce Now",
+				IsSystemReleased = true,
+				SystemReleaseState = "Full Release",
+				SystemReleaseYearEurope = new DateOnly(2015,10,01),
+				SystemReleaseYearAmerica = new DateOnly(2015,10,01),
+				SystemReleaseYearJapan = new DateOnly(2015,10,01),
+				SystemGeneralReleaseYear = new DateOnly(2020,02,04),
+				SystemGeneralReleasePrice = 9.99,
+				ReleasedBy = "Nvidia",
+				SystemType = "Cloud gaming service",
+				UnitsSold = 25000000,
+				MediaType = "Cloud",
+				CPU = "x86",
+				CPUType = "Central Processing Unit",
+				CPUSpeed = 4000000000,
+				RamSize = "Unspecified",
+				GPURamSize = "Unspedified",
+				GPUSpeed = 1440000000,
+				DoesHaveRom = true,
+				ROMSize = "Unspecified",
+				ROMType = "Unspedified",
+				VideoOutputResolutions = new[]{"45 Mbit/s 4k"},
+				VideoOutputTypes = new[]{"via streaming to user's device"},
+				VideoOutputFrameRates = new[]{"60", "120"},
+				TotalGamesReleasedWorldWide = 1675,
+				Top10GamesSoldWorldWide = new[]{"Cyberpunk 2077",
+					"Assassin's Creed Valhalla",
+					"Mass Effect Legendary Edition",
+					"Ready or Not",
+					"Project Zomboid",
+					"Dying Light 2 Stay Human",
+					"Divinity: Originl Sin 2 - Definitve Edition",
+					"Total War: WARHAMMER III",
+					"Baldur's Gate 3",
+					"Disco Elysium - The Final Cut" },
+				Images = new()
+				{
+					"https://en.wikipedia.org/wiki/Google_Stadia#/media/File:Google_Stadia_Cloud_gaming_(48605754611).jpg"
+				},
+				HeroImage = "geforcenow.png",
+				Background = Color.FromArgb("#77ba00")
+			}
+		};
 
         private static List<GameConsole> homeConsoles = new List<GameConsole>()
         {
@@ -298,8 +388,92 @@ namespace GamingConsoles.Services
 
         private static List<GameConsole> vrConsoles = new List<GameConsole>()
         {
-            new(){} 
-        };
+            new()
+            {
+				SystemName = "Valve Index",
+				IsSystemReleased = true,
+				SystemReleaseState = "Released",
+				SystemReleaseYearEurope = new DateOnly(2019,06,28),
+				SystemReleaseYearAmerica = new DateOnly(2019,06,28),
+				SystemReleaseYearJapan = new DateOnly(2019,06,28),
+				SystemGeneralReleaseYear = new DateOnly(2019,06,28),
+				SystemGeneralReleasePrice = 999,
+				ReleasedBy = "Valve",
+				SystemType = "Virtual reality headset",
+				UnitsSold = 149000,
+				ControllerPorts = "Valve Index Controllers, Supports HTC Vive and Vive Pro Controllers and HTC Vive and Vive Pro Base Stations",
+				DoesHaveRom = false,
+				DoesHaveRemovableStorage = false,
+				VideoOutputResolutions = new[]{ "1440×1600" },
+				VideoOutputTypes = new[]{"Composite","Scart","VGA","Component"},
+				VideoOutputFrameRates = new[]{"80", "90", "120", "144" },
+				TotalGamesReleasedWorldWide = 6120,
+				Top10GamesSoldWorldWide = new[]{"Half-life: Alyx",
+					"Beat saber",
+					"Tetris Effect: Connected",
+					"No Man's Sky VR",
+					"VRChat",
+					"Pistol Whip",
+					"The Walking Dead: Saints & Sinners",
+					"Superhot VR",
+					"Blade and sorcery",
+					"BONEWORKS" },
+				Images = new()
+				{
+					"https://store.akamai.steamstatic.com/public/images/valveindex/valveindexheadset.png"
+				},
+				HeroImage = "steamindex.png",
+				Background = Color.FromArgb("#0c181e")
+			},
+
+			new()
+			{
+				SystemName = "Oculus Quest 2",
+				IsSystemReleased = true,
+				SystemReleaseState = "Released",
+				SystemReleaseYearEurope = new DateOnly(2020,10,13),
+				SystemReleaseYearAmerica = new DateOnly(2020,10,13),
+				SystemReleaseYearJapan = new DateOnly(2020,10,13),
+				SystemGeneralReleaseYear = new DateOnly(2020,10,13),
+				SystemGeneralReleasePrice = 399,
+				ReleasedBy = "Reality Labs",
+				SystemType = "Virtual reality headset",
+				UnitsSold = 149000,
+				ControllerPorts = "6DOF inside-out tracking through 4 built-in cameras and 2 controllers with accelerometers and gyroscopes",
+				CPU = "Qualcomm Snapdragon XR2",
+				CPUType = "Central Processing Unit",
+				CPUSpeed = 2800000000,
+				RamSize = "6GB LPDDR4X",
+				DoesHaveRom = true,
+				ROMSize = "256GB, 128GB, 64GB",
+				ROMType = "Internal SSD",
+				DoesHaveRemovableStorage = false,
+				VideoOutputResolutions = new[]{ "1832x1920" },
+				VideoOutputTypes = new[]{"USB-C", "Bluetooth 5", "Wi-Fi 6"},
+				VideoOutputFrameRates = new[]{"72 - 120" },
+				TotalGamesReleasedWorldWide = 266,
+				Top10GamesSoldWorldWide = new[]{"Blade & Sorcery: Nomad",
+					"Beat saber",
+					"Among Us VR",
+					"BONELAB",
+					"Job Simulator",
+					"Breachers",
+					"Creed: Rise to Glory - Championship Edition",
+					"Contractors",
+					"TOTALLY BASEBALL",
+					"SUPERHOT VR" },
+				Images = new()
+				{
+
+					"https://scontent-hel3-1.xx.fbcdn.net/v/t39.8562-6/309429762_776284740263249_6847651965892883211_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6825c5&_nc_ohc=PvTv1Ga8MiQAX9B4oBi&_nc_ht=scontent-hel3-1.xx&oh=00_AfAwGPew0v-JbjBFz2pinj0FURlx5ohMeKjdkRGC0E_1Kg&oe=6473CE92",
+					"https://scontent-hel3-1.xx.fbcdn.net/v/t39.8562-6/275180934_5027591173967795_4509175604745275242_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6825c5&_nc_ohc=VZIYdqD90nsAX9JtTBE&_nc_ht=scontent-hel3-1.xx&oh=00_AfAg85QkPRyaaiOOJARSg5al2p1uRjMyR75jHuHx8aCdug&oe=64734568",
+					"https://scontent-hel3-1.xx.fbcdn.net/v/t39.8562-6/265586575_1723982231124599_7882970043049940222_n.png?_nc_cat=106&ccb=1-7&_nc_sid=6825c5&_nc_ohc=m_njdh9iPTcAX9il9Ew&_nc_ht=scontent-hel3-1.xx&oh=00_AfCJ7vqyOfo-mcfEJ6LyeNAldvTZwvZ9bA7fjH485cT5nQ&oe=64742199"
+
+				},
+				HeroImage = "oculusquesttwo.png",
+				Background = Color.FromArgb("#1d65c1")
+			}
+		};
         //public static List<GameConsole> GetFeaturePlanets()
         //{
         //    var random = new Random();

@@ -1,120 +1,129 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GamingConsoles.Views.ArcadeSelectionPage"
              Title="ArcadeSelectionPage"
              xmlns:models="clr-namespace:GamingConsoles.Models">
+    
     <ContentPage.Background>
         <LinearGradientBrush>
             <GradientStop Color="{StaticResource BGColor}"/>
         </LinearGradientBrush>
     </ContentPage.Background>
-
     <Grid>
-        <ImageButton
-            WidthRequest="24"
-            HeightRequest="24"
-            Source="imgback.png"
-            Grid.Row="0"
+        <Grid        
+        x:Name="Menu"
+        Margin="24,52,24,0"
+        ColumnDefinitions="*,*"
+        RowDefinitions="Auto,*">
+
+            <ImageButton
+                WidthRequest="24"
+                HeightRequest="24"
+                Source="imgback.png"
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                Clicked="SeeCategories_Clicked" />
+            
+            <Label
+                Text="Back to category selection"
+                Style="{StaticResource BaseSubTitleFontStyle}"
+                HorizontalOptions="Center"/>
+        </Grid>
+
+    <Grid
+        x:Name="Header"
+        ColumnDefinitions="*, Auto"
+        RowDefinitions="Auto,*">
+
+        <ScrollView
+            Grid.Row="1"
             Grid.Column="0"
-            HorizontalOptions="Start"
-            VerticalOptions="Center"
-            Clicked="BackButton_Clicked" />
-
-        <Grid
-            x:Name="Header">
-
-            <Grid.Background>
-                <SolidColorBrush Color="{StaticResource BGColor}"/>
-            </Grid.Background>
-
-
+            Grid.ColumnSpan="2"
+            HorizontalScrollBarVisibility="Never"
+            VerticalScrollBarVisibility="Never"
+            Margin="0,16,0,0">
+            
             <!--Header-->
             <VerticalStackLayout
-                Padding="24,42,24,0"
-                HorizontalOptions="End"
-                Spacing="20">
+                    Spacing="20">
 
+                <Border
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"
+                    Stroke="{StaticResource BorderColor}"
+                    StrokeThickness="6"
+                    Grid.Row="1"
+                    Grid.Column="1">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="28"/>
+                    </Border.StrokeShape>
+                </Border>
+                
+                <!--Selection options-->
                 <Label
-                    Text="Console selection"
                     Style="{StaticResource BaseTitleFontStyle}"
-                    HorizontalOptions="Center"/>
+                    Margin="0,12,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Select a console :"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
+                <CollectionView
+                            x:Name="arcadeConsoles"
+                            HeightRequest="230">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout
+                                    Orientation="Horizontal"
+                                    ItemSpacing="16"/>
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate
+                            x:DataType="models:GameConsole">
+                            <VerticalStackLayout>
+                                <Border
+                                        VerticalOptions="Fill"
+                                        WidthRequest="220"
+                                        StrokeThickness="0"
+                                        Background="{Binding Background}"
+                                        Padding="30">
+                                    
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="24"/>
+                                    </Border.StrokeShape>
+
+                                    <Grid
+                                            RowDefinitions="*, Auto, Auto"
+                                            RowSpacing="4">
+
+                                        <Image
+                                                Grid.Row="1"
+                                                Source="{Binding HeroImage}"
+                                                Aspect="AspectFit"
+                                                VerticalOptions="Fill"
+                                                HorizontalOptions="Fill" />
+
+                                        <Label
+                                                Grid.Row="2"
+                                                Style="{StaticResource SubTitleFontStyle}"
+                                                Text="{Binding SystemName}"
+                                                Margin="0,8,0,0" />
+                                    </Grid>
+                                </Border>
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </VerticalStackLayout>
-
-            <Border
-                WidthRequest="50"
-                HeightRequest="50"
-                VerticalOptions="Center"
-                HorizontalOptions="End"
-                Stroke="{StaticResource BorderColor}"
-                StrokeThickness="6"
-                Grid.Row="0"
-                Grid.Column="1">
-
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="28"/>
-                </Border.StrokeShape>
-            </Border>
-            <!--Selection options-->
-            <Label
-                Style="{StaticResource PageSubHeaderStyle}"
-                Margin="0,12,0,0">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Select a console "/>
-                        <Span Text=":" FontSize="20"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-
-            <CollectionView
-                        x:Name="arcadeConsoles"
-                        HeightRequest="230">
-
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout
-                                Orientation="Horizontal"
-                                ItemSpacing="16"/>
-                </CollectionView.ItemsLayout>
-
-                <CollectionView.ItemTemplate>
-                    <DataTemplate
-                        x:DataType="models:GameConsole">
-                        <VerticalStackLayout>
-                            <Border
-                                    VerticalOptions="Fill"
-                                    WidthRequest="220"
-                                    StrokeThickness="0"
-                                    Background="{Binding Background}"
-                                    Padding="20">
-                                <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="24"/>
-                                </Border.StrokeShape>
-
-                                <Grid
-                                        RowDefinitions="*, Auto, Auto"
-                                        RowSpacing="4">
-
-                                    <Image
-                                            Grid.Row="0"
-                                            Source="{Binding HeroImage}"
-                                            Aspect="AspectFit"
-                                            VerticalOptions="Fill"
-                                            HorizontalOptions="Fill" />
-
-                                    <Label
-                                            Grid.Row="1"
-                                            Style="{StaticResource SubTitleFontStyle}"
-                                            Text="{Binding SystemName}"
-                                            Margin="0,8,0,0" />
-                                </Grid>
-                            </Border>
-                        </VerticalStackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
+        </ScrollView>
         </Grid>
     </Grid>
 </ContentPage>

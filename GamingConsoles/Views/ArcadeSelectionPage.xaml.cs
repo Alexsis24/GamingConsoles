@@ -11,8 +11,7 @@ public partial class ArcadeSelectionPage : ContentPage
         base.OnAppearing();
         arcadeConsoles.ItemsSource = GameConsolesServices.GetArcadeConsoles();
     }
-    async void BackButton_Clicked(System.Object sender, System.EventArgs e)
-    {
-        await Navigation.PopAsync();
-    }
+    
+    public async void SeeCategories_Clicked(System.Object sender, System.EventArgs e)
+        => Navigation.PushAsync(new CategoryPage());
 }

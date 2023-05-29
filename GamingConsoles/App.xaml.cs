@@ -12,8 +12,8 @@ namespace GamingConsoles;
 
 public partial class App : Application
 {
-	const int WindowWidth = 540;
-	const int WindowHeight = 800;
+	const int WindowWidth = 580;
+	const int WindowHeight = 900;
 
 	public App()
 	{

@@ -82,7 +82,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="ViewModel\" />
 	  <Folder Include="Resources\Images\NewFolder\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.ObjectModel" Version="4.3.0" />
 	</ItemGroup>
 
 </Project>

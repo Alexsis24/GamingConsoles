@@ -56,7 +56,9 @@
 
                 <CollectionView
                             x:Name="arcadeConsoles"
-                            HeightRequest="230">
+                            HeightRequest="230"
+                            SelectionMode="Single"
+                            SelectionChanged="Console_SelectionChanged">
 
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout
@@ -75,9 +77,6 @@
                                         Background="{Binding Background}"
                                         Padding="30">
                                     
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="24"/>
-                                    </Border.StrokeShape>
 
                                     <Grid
                                             RowDefinitions="*, Auto, Auto"
@@ -96,9 +95,7 @@
                                                 Style="{StaticResource SubTitleFontStyle}"
                                                 Text="{Binding SystemName}"
                                                 Margin="0,8,0,0" />
-                                        <Button
-                                                Text="View"
-                                                Clicked="SelectedConsolePage"/>
+                                        
                                         </Grid>
                                 </Border>
                             </VerticalStackLayout>

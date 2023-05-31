@@ -16,17 +16,9 @@ public partial class ArcadeSelectionPage : ContentPage
     {
         await Navigation.PopAsync();
     }
-
-    public async void SelectedConsolePage(System.Object sender, System.EventArgs e)
+    async void Console_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
     {
-
-        var selectedConsole = GameConsolesServices.GetArcadeConsoles()
-               .Where(x => x.SystemName == "Donkey Kong")
-			   ;
-		foreach (var item in selectedConsole)
-		{
-            await Navigation.PushAsync(new GameConsolePage(item));
-        }
-        
-    }   
+        await Navigation.PushAsync(new GameConsolePage(e.CurrentSelection.First() as GameConsole));
+    }
+    
 }

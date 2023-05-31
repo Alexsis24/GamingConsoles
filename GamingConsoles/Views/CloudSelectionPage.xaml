@@ -57,7 +57,9 @@
 
                     <CollectionView
                             x:Name="cloudConsoles"
-                            HeightRequest="230">
+                            HeightRequest="230"
+                            SelectionMode="Single"
+                            SelectionChanged="Console_SelectionChanged">>
 
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout
@@ -75,10 +77,6 @@
                                         StrokeThickness="0"
                                         Background="{Binding Background}"
                                         Padding="30">
-
-                                        <Border.StrokeShape>
-                                            <RoundRectangle CornerRadius="24"/>
-                                        </Border.StrokeShape>
 
                                         <Grid
                                             RowDefinitions="*, Auto, Auto"

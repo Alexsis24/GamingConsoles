@@ -56,7 +56,9 @@
 
                     <CollectionView
                             x:Name="handheldConsoles"
-                            HeightRequest="230">
+                            HeightRequest="230"
+                            SelectionMode="Single"
+                            SelectionChanged="Console_SelectionChanged">>
 
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout

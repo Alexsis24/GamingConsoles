@@ -15,4 +15,8 @@ public partial class HomeSelectionPage : ContentPage
     {
         await Navigation.PopAsync();
     }
+    async void Console_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
+    {
+        await Navigation.PushAsync(new GameConsolePage(e.CurrentSelection.First() as GameConsole));
+    }
 }

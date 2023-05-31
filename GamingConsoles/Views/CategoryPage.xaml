@@ -83,13 +83,13 @@
                                 VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"
                                 Padding="0, 0, 0, 0"
-                                Text="Home Consoles"/>
+                                Text="Arcade"/>
 
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeConsolePage"
+                                Clicked="GetArcadeSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -115,13 +115,13 @@
                                 VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"
                                 Padding="0, 0, 0, 0"
-                                Text="Handheld consoles"/>
+                                Text="Cloud consoles"/>
 
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
-                                Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Source="cloudplatformicon.png"
+                                Clicked="GetCloudSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -148,13 +148,13 @@
                                 VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"
                                 Padding="0, 0, 0, 0"
-                                Text="VR"/>
+                                Text="Handheld"/>
 
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Clicked="GetHandheldSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -180,13 +180,13 @@
                                 VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"
                                 Padding="0, 0, 0, 0"
-                                Text="Cloud"/>
+                                Text="Home"/>
 
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
-                                Source="snesimagetp.png"
-                                Clicked="SeeTestPage"
+                                Source="homeconsoleicon.png"
+                                Clicked="GetHomeSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -212,13 +212,13 @@
                                 VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"
                                 Padding="0, 0, 0, 0"
-                                Text="Arcade"/>
+                                Text="VR"/>
 
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
-                                Source="snesimagetp.png"
-                                Clicked="GetArcadeSelection"
+                                Source="vricon.png"
+                                Clicked="GetVRSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 BorderColor="Transparent"
@@ -228,7 +228,7 @@
                         </Grid>
 
 
-                        <!--GRID: 4, 2-->
+                        <!--GRID: 4, 2--><!--
                         <Grid
                             Grid.Row="4"
                             Grid.Column="2"
@@ -236,7 +236,7 @@
                             ColumnDefinitions="*"
                             Background="{StaticResource DBlue}">
 
-                            <!--title-->
+                            --><!--title--><!--
                             <Label  
                                 Background="{StaticResource LBlue}"
                                 Grid.Row="0"
@@ -246,7 +246,7 @@
                                 Padding="0, 0, 0, 0"
                                 Text="???"/>
 
-                            <!--button image-->
+                            --><!--button image--><!--
                             <ImageButton 
                                 Grid.Row="1"
                                 Source="snesimagetp.png"
@@ -257,7 +257,7 @@
                                 Background="Transparent" 
                                 BackgroundColor="Transparent" />
 
-                        </Grid>
+                        </Grid>-->
 
                     </Grid>
 

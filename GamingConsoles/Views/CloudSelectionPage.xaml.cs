@@ -1,17 +1,16 @@
 namespace GamingConsoles.Views;
 
-public partial class ArcadeSelectionPage : ContentPage
+public partial class CloudSelectionPage : ContentPage
 {
-    public ArcadeSelectionPage()
+    public CloudSelectionPage()
     {
         InitializeComponent();
     }
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        arcadeConsoles.ItemsSource = GameConsolesServices.GetArcadeConsoles();
+        cloudConsoles.ItemsSource = GameConsolesServices.GetCloudConsoles();
     }
-
     async void BackButton_Clicked(System.Object sender, System.EventArgs e)
     {
         await Navigation.PopAsync();

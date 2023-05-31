@@ -1,34 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GamingConsoles.Views.ArcadeSelectionPage"
-             Title="    ArcadeSelectionPage"
+             x:Class="GamingConsoles.Views.VRSelectionPage"
+             Title="    VRSelectionPage"
              xmlns:models="clr-namespace:GamingConsoles.Models">
-    
+
     <ContentPage.Background>
         <LinearGradientBrush>
             <GradientStop Color="{StaticResource BGColor}"/>
         </LinearGradientBrush>
     </ContentPage.Background>
-    <Grid>        
+    <Grid>
 
-    <Grid
+        <Grid
         x:Name="Header"
         ColumnDefinitions="*, Auto"
         RowDefinitions="Auto,*">
 
-        <ScrollView
+            <ScrollView
             Grid.Row="1"
             Grid.Column="0"
             Grid.ColumnSpan="2"
             HorizontalScrollBarVisibility="Never"
             VerticalScrollBarVisibility="Never"
             Margin="0,16,0,0">
-            
-            <!--Header-->
-            <VerticalStackLayout
+
+                <!--Header-->
+                <VerticalStackLayout
                     Spacing="20">
 
-                <Border
+                    <Border
                     WidthRequest="50"
                     HeightRequest="50"
                     VerticalOptions="Center"
@@ -38,71 +39,71 @@
                     Grid.Row="1"
                     Grid.Column="1">
 
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="28"/>
-                    </Border.StrokeShape>
-                </Border>
-                
-                <!--Selection options-->
-                <Label
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="28"/>
+                        </Border.StrokeShape>
+                    </Border>
+
+                    <!--Selection options-->
+                    <Label
                     Style="{StaticResource BaseTitleFontStyle}"
                     Margin="0,12,0,0">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Select a console :"/>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Select a console :"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
 
-                <CollectionView
-                            x:Name="arcadeConsoles"
+                    <CollectionView
+                            x:Name="vrConsoles"
                             HeightRequest="230">
 
-                    <CollectionView.ItemsLayout>
-                        <LinearItemsLayout
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout
                                     Orientation="Horizontal"
                                     ItemSpacing="16"/>
-                    </CollectionView.ItemsLayout>
+                        </CollectionView.ItemsLayout>
 
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate
                             x:DataType="models:GameConsole">
-                            <VerticalStackLayout>
-                                <Border
+                                <VerticalStackLayout>
+                                    <Border
                                         VerticalOptions="Fill"
                                         WidthRequest="220"
                                         StrokeThickness="0"
                                         Background="{Binding Background}"
                                         Padding="30">
-                                    
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="24"/>
-                                    </Border.StrokeShape>
 
-                                    <Grid
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="24"/>
+                                        </Border.StrokeShape>
+
+                                        <Grid
                                             RowDefinitions="*, Auto, Auto"
                                             RowSpacing="4">
 
-                                        <Image
+                                            <Image
                                                 Grid.Row="1"
                                                 Source="{Binding HeroImage}"
                                                 Aspect="AspectFit"
                                                 VerticalOptions="Fill"
                                                 HorizontalOptions="Fill" />
 
-                                        <Label
+                                            <Label
                                                 Grid.Row="2"
                                                 Style="{StaticResource SubTitleFontStyle}"
                                                 Text="{Binding SystemName}"
                                                 Margin="0,8,0,0" />
-                                    </Grid>
-                                </Border>
-                            </VerticalStackLayout>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </VerticalStackLayout>
-        </ScrollView>
+                                        </Grid>
+                                    </Border>
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </ScrollView>
         </Grid>
     </Grid>
 </ContentPage>

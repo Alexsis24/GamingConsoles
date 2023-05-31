@@ -1,17 +1,16 @@
 namespace GamingConsoles.Views;
 
-public partial class ArcadeSelectionPage : ContentPage
+public partial class VRSelectionPage : ContentPage
 {
-    public ArcadeSelectionPage()
+    public VRSelectionPage()
     {
         InitializeComponent();
     }
-    protected override void OnAppearing()
+        protected override void OnAppearing()
     {
         base.OnAppearing();
-        arcadeConsoles.ItemsSource = GameConsolesServices.GetArcadeConsoles();
+        vrConsoles.ItemsSource = GameConsolesServices.GetVRConsoles();
     }
-
     async void BackButton_Clicked(System.Object sender, System.EventArgs e)
     {
         await Navigation.PopAsync();

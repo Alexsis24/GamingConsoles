@@ -51,6 +51,7 @@
 	  <None Remove="Resources\Fonts\Niagaraphobia-Bro3.ttf" />
 	  <None Remove="Resources\Fonts\super-mario-bros-nes.otf" />
 	  <None Remove="Resources\Fonts\TrulyMadlyDpad-a72o.ttf" />
+	  <None Remove="Resources\Images\imgback.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -66,9 +67,27 @@
 	  <MauiXaml Update="Views\GameConsolePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\HandheldSelectionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\HomeSelectionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TestPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\VRSelectionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModel\" />
+	  <Folder Include="Resources\Images\NewFolder\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.ObjectModel" Version="4.3.0" />
 	</ItemGroup>
 
 </Project>

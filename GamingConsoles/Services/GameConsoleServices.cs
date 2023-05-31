@@ -179,7 +179,7 @@ namespace GamingConsoles.Services
                     "https://image.made-in-china.com/43f34j00waEQdHTRqtnb/Brick-Game-Player-CD-9999-.webp"
                 },
                 HeroImage = "brick.png",
-                Background = Color.FromArgb("#467893")
+                Background = Color.FromArgb("#2B6641")
             },
         };
         
@@ -230,7 +230,7 @@ namespace GamingConsoles.Services
 					"https://en.wikipedia.org/wiki/Google_Stadia#/media/File:Google_Stadia_Cloud_gaming_(48605754611).jpg"
 				},
 				HeroImage = "stadia.png",
-				Background = Color.FromArgb("#f6431e")
+				Background = Color.FromArgb("#385D8F")
 			},
 
 			new()
@@ -275,7 +275,7 @@ namespace GamingConsoles.Services
 					"https://en.wikipedia.org/wiki/Google_Stadia#/media/File:Google_Stadia_Cloud_gaming_(48605754611).jpg"
 				},
 				HeroImage = "geforcenow.png",
-				Background = Color.FromArgb("#77ba00")
+				Background = Color.FromArgb("#2B6641")
 			}
 		};
 
@@ -368,7 +368,7 @@ namespace GamingConsoles.Services
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/DualShock_2.jpg/1024px-DualShock_2.jpg"
                 },
                 HeroImage = "ps2fat.png",
-                Background = Color.FromArgb("#253633")
+                Background = Color.FromArgb("#2B6641")
             } 
         };
 
@@ -409,7 +409,7 @@ namespace GamingConsoles.Services
 					"https://store.akamai.steamstatic.com/public/images/valveindex/valveindexheadset.png"
 				},
 				HeroImage = "steamindex.png",
-				Background = Color.FromArgb("#0c181e")
+				Background = Color.FromArgb("#385D8F")
 			},
 
 			new()
@@ -457,7 +457,7 @@ namespace GamingConsoles.Services
 
 				},
 				HeroImage = "oculusquesttwo.png",
-				Background = Color.FromArgb("#1d65c1")
+				Background = Color.FromArgb("#2B6641")
 			}
 		};
         //public static List<GameConsole> GetFeaturePlanets()

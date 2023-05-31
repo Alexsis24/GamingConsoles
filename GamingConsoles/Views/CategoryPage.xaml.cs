@@ -13,21 +13,24 @@ public partial class CategoryPage : ContentPage
 
 	}
 
-	async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
-	{
-		await Navigation.PushAsync(new TestPage());
-	}
-
-
 	public async void GetHomeSelection(System.Object sender, System.EventArgs e)
-        => Application.Current.MainPage = new NavigationPage(new HomeSelectionPage());
+    {
+        await Navigation.PushAsync(new HomeSelectionPage());
+    }
     public async void GetHandheldSelection(System.Object sender, System.EventArgs e)
-        => Application.Current.MainPage = new NavigationPage(new HandheldSelectionPage());
+    {
+        await Navigation.PushAsync(new HandheldSelectionPage());
+    }
     public async void GetVRSelection(System.Object sender, System.EventArgs e)
-        => Application.Current.MainPage = new NavigationPage(new VRSelectionPage());
-    public async void GetArcadeSelection(System.Object sender, System.EventArgs e)
-        => Application.Current.MainPage = new NavigationPage(new ArcadeSelectionPage());
+    {
+        await Navigation.PushAsync(new VRSelectionPage());
+    }
+    async void GetArcadeSelection(System.Object sender, System.EventArgs e)
+	{
+		await Navigation.PushAsync(new ArcadeSelectionPage());
+	}
     public async void GetCloudSelection(System.Object sender, System.EventArgs e)
-        => Application.Current.MainPage = new NavigationPage(new CloudSelectionPage());
-
+    {
+        await Navigation.PushAsync(new CloudSelectionPage());
+    }
 }

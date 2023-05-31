@@ -9,7 +9,7 @@ public partial class CloudSelectionPage : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        cloudConsoles.ItemsSource = GameConsolesServices.GetArcadeConsoles();
+        cloudConsoles.ItemsSource = GameConsolesServices.GetCloudConsoles();
     }
     async void BackButton_Clicked(System.Object sender, System.EventArgs e)
     {

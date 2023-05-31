@@ -16,4 +16,17 @@ public partial class ArcadeSelectionPage : ContentPage
     {
         await Navigation.PopAsync();
     }
+
+    public async void SelectedConsolePage(System.Object sender, System.EventArgs e)
+    {
+
+        var selectedConsole = GameConsolesServices.GetArcadeConsoles()
+               .Where(x => x.SystemName == "Donkey Kong")
+			   ;
+		foreach (var item in selectedConsole)
+		{
+            await Navigation.PushAsync(new GameConsolePage(item));
+        }
+        
+    }   
 }

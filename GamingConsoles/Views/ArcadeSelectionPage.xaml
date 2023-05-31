@@ -88,14 +88,18 @@
                                                 Source="{Binding HeroImage}"
                                                 Aspect="AspectFit"
                                                 VerticalOptions="Fill"
-                                                HorizontalOptions="Fill" />
+                                                HorizontalOptions="Fill" 
+                                            />
 
                                         <Label
                                                 Grid.Row="2"
                                                 Style="{StaticResource SubTitleFontStyle}"
                                                 Text="{Binding SystemName}"
                                                 Margin="0,8,0,0" />
-                                    </Grid>
+                                        <Button
+                                                Text="View"
+                                                Clicked="SelectedConsolePage"/>
+                                        </Grid>
                                 </Border>
                             </VerticalStackLayout>
                         </DataTemplate>

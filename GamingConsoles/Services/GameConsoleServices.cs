@@ -9,9 +9,9 @@ using GamingConsoles.Views;
 
 namespace GamingConsoles.Services
 {
-    internal static class GameConsolesServices
+    public static class GameConsolesServices
     {
-        private static List<GameConsole> gameConsoles = new List<GameConsole>()
+        public static List<GameConsole> gameConsoles = new List<GameConsole>()
         {
             new()
             {

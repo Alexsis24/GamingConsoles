@@ -144,8 +144,10 @@ namespace GamingConsoles.Services
                     "Batman Returns" },
                 Images = new()
                 {
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Sega-Game-Gear-WB.png/1024px-Sega-Game-Gear-WB.png",
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Sega-Game-Gear-wTv-Tuner.jpg/800px-Sega-Game-Gear-wTv-Tuner.jpg"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Sega-Game-Gear-WB.png/1200px-Sega-Game-Gear-WB.png",
+                    "https://www.retroplace.com/pics/gamegear/packshots/35383--sega-game-gear.png",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Sega-Game-Gear-wTv-Tuner.jpg/544px-Sega-Game-Gear-wTv-Tuner.jpg"
+
                 },
                 HeroImage = "gamegearlogo.png",
                 Background = Color.FromArgb("#385D8F"),
@@ -239,8 +241,11 @@ namespace GamingConsoles.Services
 					"Assassin's Creed Valhalla" },
 				Images = new()
 				{
-					"https://en.wikipedia.org/wiki/Google_Stadia#/media/File:Google_Stadia_Cloud_gaming_(48605754611).jpg"
-				},
+                    "https://i.ytimg.com/vi/pEwJXrQ_27k/maxresdefault.jpg",
+                    "https://www.digitaltrends.com/wp-content/uploads/2019/11/google-stadia-rs_3.jpg?p=1",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Google_Stadia_Controller.jpg/1280px-Google_Stadia_Controller.jpg",
+                    "https://www.techadvisor.com/wp-content/uploads/2022/06/google_stadia_hero_press_image_2020.jpg"
+                },
 				HeroImage = "stadialogo.png",
 				Background = Color.FromArgb("#385D8F"),
                 Background2 = Color.FromArgb("#649CC4"),
@@ -286,8 +291,10 @@ namespace GamingConsoles.Services
 					"Disco Elysium - The Final Cut" },
 				Images = new()
 				{
-					"https://en.wikipedia.org/wiki/Google_Stadia#/media/File:Google_Stadia_Cloud_gaming_(48605754611).jpg"
-				},
+                    "https://www.pcworld.com/wp-content/uploads/2023/04/geforcenow_2021-100878840-orig-1.jpg",
+                    "https://blogs.nvidia.com/wp-content/uploads/2020/04/geforce-now-power-play-1.jpg",
+
+                },
 				HeroImage = "geforcenowlogo.png",
 				Background = Color.FromArgb("#2B6641"),
                 Background2 = Color.FromArgb("#55A348"),
@@ -329,8 +336,11 @@ namespace GamingConsoles.Services
                 Top10GamesSoldWorldWide = new[]{"Super Mario Bros.","Duck Hunt","Super Mario Bros. 3","Tetris","Super Mario Bros. 2 (International Version)","The Legend of Zelda","Dr.Mario","Zelda II: The Adventure of Link","Excitebike","Golf7" },
                 Images = new()
                 {
-                    "https://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/0/06/Nintendo-Famicom-Console-Set-FL.jpg"
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1920px-NES-Console-Set.jpg",
+                    "https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/320w/products/18824/11159/Boxed%20System%20Nintendo%20NES%20-%206-2__99356.1669150023.jpg?c=2",
+                    "https://retrododo.com/wp-content/uploads/2020/04/best-nes-accessories.jpg"
+
+
                 },
                 HeroImage = "neslogo.png",
                 Background = Color.FromArgb("#385D8F"),
@@ -383,11 +393,13 @@ namespace GamingConsoles.Services
                     "Kingdom Hearts" },
                 Images = new()
                 {
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/PS2-Versions.jpg/1024px-PS2-Versions.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Sony-PlayStation-2-70001-Console-BR.jpg/1024px-Sony-PlayStation-2-70001-Console-BR.jpg",
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/DualShock_2.jpg/1024px-DualShock_2.jpg"
+                    "https://upload.wikimedia.org/wikipedia/commons/1/1c/PS2-Versions.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Sony-PlayStation-2-70001-Console-BR.jpg/220px-Sony-PlayStation-2-70001-Console-BR.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/DualShock_2.jpg/1280px-DualShock_2.jpg",
+                    "https://i.ytimg.com/vi/buUoGSzEpuA/maxresdefault.jpg"
+
                 },
-                HeroImage = "ps2tlogo.png",
+                HeroImage = "ps2logo.png",
                 Background = Color.FromArgb("#2B6641"),
                 Background2 = Color.FromArgb("#55A348"),
                 AboutText = "The PlayStation 2 (PS2) is a home video game console developed and marketed by Sony Computer Entertainment. It was first released in Japan on 4 March 2000, in North America on 26 October 2000, in Europe on 24 November 2000, and in Australia on 30 November 2000. It is the successor to the original PlayStation, as well as the second installment in the PlayStation brand of consoles. As a sixth-generation console, it competed with Nintendo's GameCube, Sega's Dreamcast, and Microsoft's Xbox. It is the best-selling video game console of all time, having sold over 155 million units worldwide.\r\n\r\nAnnounced in 1999, Sony began developing the console after the immense success of its predecessor. The highlight of the system was its Emotion Engine processor, co-developed by Sony and Toshiba, which was said to be more powerful than personal computers.[15] The PS2 offered backward-compatibility for its predecessor's DualShock controller, as well as its games.\r\n\r\nThe PlayStation 2 received widespread critical acclaim upon release. A total of over 4,000 game titles were released worldwide, with over 1.5 billion copies sold.[16] In 2004, Sony released a smaller, lighter revision of the console known as the PS2 Slim. Even after the release of its successor, the PlayStation 3, it remained popular well into the seventh generation. It continued to be produced until the beginning of 2013 when Sony finally announced that it had been discontinued after over twelve years of production, one of the longest lifespans of any video game console. New games for the console continued to be released until even shortly after the end of its life and support from Sony."
@@ -429,8 +441,9 @@ namespace GamingConsoles.Services
 					"BONEWORKS" },
 				Images = new()
 				{
-					"https://store.akamai.steamstatic.com/public/images/valveindex/valveindexheadset.png"
-				},
+					"https://store.akamai.steamstatic.com/public/images/valveindex/valveindexheadset.png",
+                    "https://www.uploadvr.com/content/images/2019/04/Valve-Index-People_08.jpg"
+                },
 				HeroImage = "valveindexlogo.png",
 				Background = Color.FromArgb("#385D8F"),
                 Background2 = Color.FromArgb("#649CC4"),
@@ -476,12 +489,11 @@ namespace GamingConsoles.Services
 					"SUPERHOT VR" },
 				Images = new()
 				{
+                    "https://i.ytimg.com/vi/ATVGl9wOJsM/maxresdefault.jpg",
+                    "https://assets.newatlas.com/dims4/default/d3da2bd/2147483647/strip/true/crop/3443x2295+573+320/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F3a%2F0a%2F70c848b546efa2fdc138f271c99f%2Flifestyle-1.jpg",
+                    "https://i.ytimg.com/vi/YxEF6gWekc4/mqdefault.jpg"
 
-					"https://scontent-hel3-1.xx.fbcdn.net/v/t39.8562-6/309429762_776284740263249_6847651965892883211_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6825c5&_nc_ohc=PvTv1Ga8MiQAX9B4oBi&_nc_ht=scontent-hel3-1.xx&oh=00_AfAwGPew0v-JbjBFz2pinj0FURlx5ohMeKjdkRGC0E_1Kg&oe=6473CE92",
-					"https://scontent-hel3-1.xx.fbcdn.net/v/t39.8562-6/275180934_5027591173967795_4509175604745275242_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6825c5&_nc_ohc=VZIYdqD90nsAX9JtTBE&_nc_ht=scontent-hel3-1.xx&oh=00_AfAg85QkPRyaaiOOJARSg5al2p1uRjMyR75jHuHx8aCdug&oe=64734568",
-					"https://scontent-hel3-1.xx.fbcdn.net/v/t39.8562-6/265586575_1723982231124599_7882970043049940222_n.png?_nc_cat=106&ccb=1-7&_nc_sid=6825c5&_nc_ohc=m_njdh9iPTcAX9il9Ew&_nc_ht=scontent-hel3-1.xx&oh=00_AfCJ7vqyOfo-mcfEJ6LyeNAldvTZwvZ9bA7fjH485cT5nQ&oe=64742199"
-
-				},
+                },
 				HeroImage = "oculusquestlllogo.png",
 				Background = Color.FromArgb("#2B6641"),
                 Background2 = Color.FromArgb("#55A348"),

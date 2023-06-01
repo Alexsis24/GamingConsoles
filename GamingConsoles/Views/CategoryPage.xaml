@@ -88,7 +88,7 @@
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
-                                Source="snesimagetp.png"
+                                Source="arcadeicon.png"
                                 Clicked="GetArcadeSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
@@ -153,7 +153,7 @@
                             <!--button image-->
                             <ImageButton 
                                 Grid.Row="1"
-                                Source="snesimagetp.png"
+                                Source="handheldicon.png"
                                 Clicked="GetHandheldSelection"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"

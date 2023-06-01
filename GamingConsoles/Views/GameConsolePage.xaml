@@ -291,6 +291,9 @@
                                     Grid.Row="2">
                                 </Label>
                                 <Label
+                                    HorizontalOptions="End"
+                                    WidthRequest="300"
+                                    LineBreakMode="WordWrap"
                                     Padding="12,12,12,12"
                                     Style="{StaticResource ConsoleDarkTextStyle}"
                                     HorizontalTextAlignment="End"

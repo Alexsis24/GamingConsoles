@@ -3,13 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GamingConsoles.Views.GameConsolePage"
              xmlns:models="clr-namespace:GamingConsoles.Models">
-    <ContentPage.Background>
+    <ContentPage.Background
+                x:DataType="models:GameConsole">
         <SolidColorBrush
-                Color="{StaticResource LGreen}"
+                Color="{Binding Background2}"
                 />
     </ContentPage.Background>
 <Grid>
     <Grid
+        x:DataType="models:GameConsole"
         RowDefinitions="64,*"
         Background="{StaticResource BGColor}">
 
@@ -17,7 +19,7 @@
         <Grid
             Grid.Row="0"
             ColumnDefinitions="*"
-            Background="{StaticResource LGreen}">
+            Background="{Binding Background2}">
 
             <Label
                 x:DataType="models:GameConsole"
@@ -34,14 +36,16 @@
             VerticalOptions="Fill"  >
 
 
-                <VerticalStackLayout>
+                <VerticalStackLayout
+                    Spacing="12"
+                    >
                     <!--Short blurb with heroimage-->
 
                     <Grid
                     Grid.Row="0"
                     ColumnDefinitions="*"
                     RowDefinitions="200,*"
-                    Background="{StaticResource DGreen}">
+                    Background="{Binding Background}">
 
                         <Label
                             x:DataType="models:GameConsole"
@@ -50,43 +54,776 @@
                             HorizontalTextAlignment="Start"   
                             HorizontalOptions="Start"
                             Text="{Binding SystemName}"
-                            WidthRequest="180"
+                            WidthRequest="360"
                             VerticalOptions="StartAndExpand"
                             />
                         <Image
-                            Margin="12,12,12,0"
-                            Source="snesimage.png"
+                            Margin="12,12,12,12"
+                            Source="{Binding HeroImage}"
                             Aspect="AspectFit"
                             HorizontalOptions="End"
                             />
                     </Grid>
                     <!--section line-->
+                    <Rectangle
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        HeightRequest="5"
+                        Fill="{StaticResource RedAccent}"
+                        Stroke="{StaticResource RedAccent}"
+                        />
+                    <!--Alternative names section-->
                     <Grid
-                            Margin="12,0,12,0"
+                        x:DataType="models:GameConsole"
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="StartAndExpand" 
+                        RowDefinitions="Auto,*"
+                        Background="{Binding Background}">
+                        <Label
+                            Padding="12,12,12,12"
+                            Background="{Binding Background2}"
+                            Style="{StaticResource ConsoleTextStyle}"
+                            HorizontalTextAlignment="Start"
+                            Text="Alternative Names: "   
+                            Grid.Row="0">
+                        </Label>
+
+                        <CollectionView
+                            
                             Grid.Row="1"
-                            ColumnDefinitions="*"
-                            RowDefinitions="12,*"
-                            VerticalOptions="StartAndExpand"
-                            HeightRequest="5"
-                            Background="{StaticResource RedAccent}"
-                            />
+                            ItemsSource="{Binding AlternativeNames}">
+
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout
+                                    Orientation="Vertical">
+                                </LinearItemsLayout>
+                            </CollectionView.ItemsLayout>
+
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Label
+                                        LineBreakMode="WordWrap"
+                                        LineHeight="1"
+                                        Margin="12,0,12,0"
+                                        Text="{Binding .}"
+                                        Style="{StaticResource ConsoleDarkTextStyle}"
+                                        HorizontalTextAlignment="End"          
+                                        Grid.Row="1">
+                                    </Label>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <!--this is an array type, we need to convert the array to text-legible object using a converter of somekind-->
+
+
+                    </Grid>
+                    
+                    <!--section line-->
+                    <Rectangle
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        HeightRequest="5"
+                        Fill="{StaticResource RedAccent}"
+                        Stroke="{StaticResource RedAccent}"
+                        />
+                    <!--<Label
+                        Style="{StaticResource ConsoleTextStyle}"
+                        Margin="12,12,12,12"
+                        Padding="12,12,12,12"
+                        HorizontalTextAlignment="Start"                
+                        Text="wikipedia blurb here, value not implemented yet in model"
+                        Background="{StaticResource LGreen}"
+                        Grid.Row="2"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="StartAndExpand"
+                        />-->
                     <!--Overview section-->
                     <Grid
-                            Margin="12,12,12,12"
-                            Grid.Row="2"
-                            ColumnDefinitions="*"
-                            RowDefinitions="12,*"
-                            HeightRequest="200"
-                            Background="{StaticResource LBlue}"
-                            VerticalOptions="StartAndExpand"
-                            >
+                        x:DataType="models:GameConsole"
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="StartAndExpand" 
+                        RowDefinitions="Auto,*"
+                        Background="{Binding Background}">
                         <Label
-                                Style="{StaticResource ConsoleTextStyle}"
-                                Margin="12,12,0,0"
-                                HorizontalTextAlignment="Start"                
-                                Text="wikipedia blurb here"
-                                />
+                            Padding="12,12,12,12"
+                            Background="{Binding Background2}"
+                            Style="{StaticResource ConsoleTextStyle}"
+                            HorizontalTextAlignment="Start"
+                            Text="About the System: "   
+                            Grid.Row="0">
+                        </Label>
+
+                        <!--this is an array type, we need to convert the array to text-legible object using a converter of somekind-->
+                        <Label
+                            LineHeight="1.5"
+                            LineBreakMode="WordWrap"
+                            x:DataType="models:GameConsole"
+                            Padding="12,12,12,12"
+                            Style="{StaticResource ConsoleDarkTextStyle}"
+                            HorizontalTextAlignment="Start"          
+                            VerticalOptions="FillAndExpand"
+                            Text="{Binding AboutText}" 
+                            Grid.Row="1">
+                        </Label>
                     </Grid>
+                    <!--section line-->
+                    <Rectangle
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        HeightRequest="5"
+                        Fill="{StaticResource RedAccent}"
+                        Stroke="{StaticResource RedAccent}"
+                        />
+                    <!--Technical data section-->
+                    <Grid
+                        x:DataType="models:GameConsole"
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="StartAndExpand" 
+                        RowDefinitions="Auto,*"
+                        Background="{Binding Background}">
+                        <VerticalStackLayout>
+                            <Label
+                            Padding="12,12,12,12"
+                            Background="{Binding Background2}"
+                            Style="{StaticResource ConsoleTextStyle}"
+                            HorizontalTextAlignment="Start"
+                            Text="System Life: "   
+                            Grid.Row="0">
+                            </Label>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Developed by: "  
+                                    Grid.Row="1">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding DevelopedBy}" 
+                                    Grid.Row="1"
+                                    >
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Released By: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding ReleasedBy}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="First Released on: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding SystemGeneralReleaseYear}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Price on Release: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding SystemGeneralReleasePrice}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Discontinued at: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding SystemGeneralDiscontinuedAt}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Players: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding ControllerPorts}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Units sold: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding UnitsSold}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Total Games Released for Platform: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding TotalGamesReleasedWorldWide}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            
+                        </VerticalStackLayout>                        
+                    </Grid>
+
+                    <Rectangle
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        HeightRequest="5"
+                        Fill="{StaticResource RedAccent}"
+                        Stroke="{StaticResource RedAccent}"
+                        />
+                    
+                    <Grid
+                        x:DataType="models:GameConsole"
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="StartAndExpand" 
+                        RowDefinitions="Auto,*"
+                        Background="{Binding Background}">
+                        <VerticalStackLayout>
+                            <Label
+                            Padding="12,12,12,12"
+                            Background="{Binding Background2}"
+                            Style="{StaticResource ConsoleTextStyle}"
+                            HorizontalTextAlignment="Start"
+                            Text="System Specifications: "   
+                            Grid.Row="0">
+                            </Label>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Main CPU: "  
+                                    Grid.Row="1">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding CPU}" 
+                                    Grid.Row="1"
+                                    >
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="CPU speed: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding CPUSpeed}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="CPU type: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding CPUType}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Main Ram: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding RamSize}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Main Ram Type: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding RamType}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="GPU: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding GPU}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="GPU type: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding GPUType}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Graphics Ram: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding GPURamSize}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Graphics Ram Type: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding GPURamType}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Video OutPut Resolutions: " 
+                                    Grid.Row="2">
+                                </Label>
+                                
+                                <CollectionView
+                            
+                                    Grid.Row="1"
+                                    ItemsSource="{Binding VideoOutputResolutions}"
+                                    HorizontalOptions="End">
+
+                                    <CollectionView.ItemsLayout>
+                                        <LinearItemsLayout
+                                             Orientation="Vertical">     
+                                        </LinearItemsLayout>
+                                    </CollectionView.ItemsLayout>
+
+                                    <CollectionView.ItemTemplate
+                                        >
+                                        <DataTemplate>
+                                            <Label
+                                                LineBreakMode="WordWrap"
+                                                Margin="12,8,12,0"
+                                                Text="{Binding .}"
+                                                Style="{StaticResource ConsoleDarkTextStyle}"
+                                                HorizontalTextAlignment="End"          
+                                                Grid.Row="1">
+                                            </Label>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Video Framerates: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <CollectionView
+                            
+                                    Grid.Row="1"
+                                    ItemsSource="{Binding VideoOutputFrameRates}"
+                                    HorizontalOptions="End">
+
+                                    <CollectionView.ItemsLayout>
+                                        <LinearItemsLayout
+                                             Orientation="Vertical">
+                                        </LinearItemsLayout>
+                                    </CollectionView.ItemsLayout>
+
+                                    <CollectionView.ItemTemplate
+                                        >
+                                        <DataTemplate>
+                                            <Label
+                                                LineBreakMode="WordWrap"
+                                                Margin="12,8,12,0"
+                                                Text="{Binding .}"
+                                                Style="{StaticResource ConsoleDarkTextStyle}"
+                                                HorizontalTextAlignment="End"          
+                                                Grid.Row="1">
+                                            </Label>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Video Output Formats: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <CollectionView
+                            
+                                    Grid.Row="1"
+                                    ItemsSource="{Binding VideoOutputTypes}"
+                                    HorizontalOptions="End">
+
+                                    <CollectionView.ItemsLayout>
+                                        <LinearItemsLayout
+                                             Orientation="Vertical">
+                                        </LinearItemsLayout>
+                                    </CollectionView.ItemsLayout>
+
+                                    <CollectionView.ItemTemplate
+                                        >
+                                        <DataTemplate>
+                                            <Label
+                                                LineBreakMode="WordWrap"
+                                                Margin="12,8,12,0"
+                                                Text="{Binding .}"
+                                                Style="{StaticResource ConsoleDarkTextStyle}"
+                                                HorizontalTextAlignment="End"          
+                                                Grid.Row="1">
+                                            </Label>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Game Media Type: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding MediaType}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Internal Storage: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding RemovableStorageSize}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Internal Storage Type: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding RemovableStorageType}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Removable Storage: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding RemovableStorageSize}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            <Grid>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Background="{Binding Background}"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="Start"
+                                    Text="Removable Storage Type: " 
+                                    Grid.Row="2">
+                                </Label>
+                                <Label
+                                    Padding="12,12,12,12"
+                                    Style="{StaticResource ConsoleDarkTextStyle}"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding RemovableStorageType}"   
+                                    Grid.Row="2">
+                                </Label>
+                            </Grid>
+                            
+                        </VerticalStackLayout>                        
+                    </Grid>
+
+                    <Rectangle
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        HeightRequest="5"
+                        Fill="{StaticResource RedAccent}"
+                        Stroke="{StaticResource RedAccent}"
+                        />
+                    <Grid
+                        x:DataType="models:GameConsole"
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="StartAndExpand" 
+                        RowDefinitions="Auto,*"
+                        Background="{Binding Background}">
+                        <VerticalStackLayout>
+                            <Label
+                            Padding="12,12,12,12"
+                            Background="{Binding Background2}"
+                            Style="{StaticResource ConsoleTextStyle}"
+                            HorizontalTextAlignment="Start"
+                            Text="Most Sold Games for Selected System Worldwide: "   
+                            Grid.Row="0">
+                            </Label>
+                            <CollectionView
+                            
+                                    Grid.Row="1"
+                                    ItemsSource="{Binding Top10GamesSoldWorldWide}"
+                                    HorizontalOptions="Start">
+
+                                <CollectionView.ItemsLayout>
+                                    <LinearItemsLayout
+                                             Orientation="Vertical">
+                                    </LinearItemsLayout>
+                                </CollectionView.ItemsLayout>
+
+                                <CollectionView.ItemTemplate
+                                        >
+                                    <DataTemplate>
+                                        <Label
+                                                LineBreakMode="WordWrap"
+                                                Margin="12,8,12,8"
+                                                Text="{Binding .}"
+                                                Style="{StaticResource ConsoleDarkTextStyle}"
+                                                HorizontalTextAlignment="End"          
+                                                Grid.Row="1">
+                                        </Label>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </VerticalStackLayout>                        
+                    </Grid>
+
+                    <Rectangle
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        HeightRequest="5"
+                        Fill="{StaticResource RedAccent}"
+                        Stroke="{StaticResource RedAccent}"
+                        />
+                    <Grid
+                        x:DataType="models:GameConsole"
+                        Margin="12,0,12,0"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="StartAndExpand" 
+                        RowDefinitions="Auto,*"
+                        Background="{Binding Background}">
+                        <VerticalStackLayout>
+                            <Label
+                            Padding="12,12,12,12"
+                            Background="{Binding Background2}"
+                            Style="{StaticResource ConsoleTextStyle}"
+                            HorizontalTextAlignment="Start"
+                            Text="Image Gallery: "   
+                            Grid.Row="0">
+                            </Label>
+                            <Grid>
+                                <CollectionView
+                                    Margin="12,12,12,12"
+                                    Background="{Binding Background2}"
+                                    HorizontalOptions="FillAndExpand"
+                                    HeightRequest="400"
+                                    ItemsSource="{Binding Images}"
+                                    Grid.Row="1"
+                                    VerticalScrollBarVisibility="Always"
+                                    >
+                                    <CollectionView.ItemsLayout>
+                                        <LinearItemsLayout
+                                            Orientation="Vertical"
+                                            ItemSpacing="12"
+                                            >
+                                        </LinearItemsLayout>
+                                    </CollectionView.ItemsLayout>
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Image
+                                                Margin="12,12,12,12"
+                                                Source="{Binding .}"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Fill"
+                                                HeightRequest="400"
+                                                WidthRequest="480"
+                                                >
+                                            </Image>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </Grid>
+                        </VerticalStackLayout>                        
+                    </Grid>
+                    
+
                 </VerticalStackLayout>
             </ScrollView>        
         </Grid>

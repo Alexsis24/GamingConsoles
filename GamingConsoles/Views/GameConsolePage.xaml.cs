@@ -8,6 +8,12 @@ public partial class GameConsolePage : ContentPage
     {
         InitializeComponent();
         this.BindingContext = console;
+        //string AlternativeNamesOneString = "";
+        //foreach (string name in console.AlternativeNames)
+        //{
+        //    AlternativeNamesOneString += name;
+        //}
+        //console.AlternativeNames = AlternativeNamesOneString;
     }
 
     async void BackButton_Clicked(System.Object sender, System.EventArgs e)

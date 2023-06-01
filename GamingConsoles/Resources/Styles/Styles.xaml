@@ -48,7 +48,7 @@
     <Style TargetType="Label" 
            x:Key="ConsoleNameTextStyle"
            BasedOn="{StaticResource BaseTitleFontStyle}">
-        <Setter Property="FontSize" Value="60"/>
+        <Setter Property="FontSize" Value="45"/>
         <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
     </Style>
 
@@ -63,8 +63,23 @@
     <Style TargetType="Label" 
            x:Key="ConsoleTextStyle"
            BasedOn="{StaticResource BaseNormalTextFont}">
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+    </Style>
+    
+    <Style TargetType="Label" 
+           x:Key="ConsoleTextMarginStyle"
+           BasedOn="{StaticResource BaseNormalTextFont}">
         <Setter Property="FontSize" Value="20"/>
         <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="Margin"  Value="12,12,12,12" />
+    </Style>
+    
+    <Style TargetType="Label" 
+           x:Key="ConsoleDarkTextStyle"
+           BasedOn="{StaticResource BaseNormalTextFont}">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
     </Style>
 
 </ResourceDictionary>

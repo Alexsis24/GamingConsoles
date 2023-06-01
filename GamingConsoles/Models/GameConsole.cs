@@ -29,7 +29,7 @@ namespace GamingConsoles.Models
         public double SystemGeneralReleasePrice { get; set; } //release price worldwide
         public string ReleasedBy { get; set; }  //console company, example: nintendo
         public string? DevelopedBy { get; set; } //developer of console. may not differ, but can differ from releasing company
-        public string[]? AlternativeNames { get; set; } //alternative popular names for the console
+        public string[]? AlternativeNames { get; set; } //alternative popular names for the console.
         public string SystemType { get; set; } //typ of system, example: home, handheld, VR, arcade, cloud etc
         // use systemtype to sort the consoles into the proper categories "Home Console", "Handheld Console", "Virtual Reality System", "Arcade Platform", "Cloud Platform"
         public int UnitsSold { get; set; } //lifetime worldwide unit sales total
@@ -88,8 +88,10 @@ namespace GamingConsoles.Models
         public bool? DoesHaveSystemLink { get; set; } //does the console have a console-to-console linking system other than wireless or lan? link cables
         public string? SystemLinkType { get; set; } //system linking type
         public int? HowManySystemsLinkable { get; set; } //how many systems can be linked up at one time through various official means.
-        public List<string> Images { get; set; }
-        public string HeroImage { get; set; }
-        public Color Background { get; set; }
+        public List<string> Images { get; set; } //images for the selected console or platform
+        public string HeroImage { get; set; } //main image to represent the platform with, can be logo
+        public Color Background { get; set; } //Dark theme color for the console
+        public Color Background2 { get; set; } //Light theme color for the console
+        public string AboutText { get; set; } //text about the console
     }
 }
